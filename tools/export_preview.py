@@ -9,7 +9,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def data_url(path: Path) -> str:
-    mime = "image/webp" if path.suffix == ".webp" else "image/png"
+    mime = {".webp": "image/webp", ".png": "image/png", ".gif": "image/gif"}[path.suffix]
     return "data:" + mime + ";base64," + base64.b64encode(path.read_bytes()).decode()
 
 
@@ -22,24 +22,21 @@ def main():
         css = css.replace("/assets/theme/" + name + ".webp", uri)
         js = js.replace("/assets/theme/" + name + ".webp", uri)
     front_art = {}
-    for deck in ("dawn", "midnight"):
-        for art in (ROOT / "art" / deck).glob("*.png"):
+    for deck in ("dawn", "midnight", "crt"):
+        for art in (ROOT / "art" / deck).glob("*"):
+            if art.suffix not in (".png", ".gif"):
+                continue
             front_art["/assets/decks/" + deck + "/" + art.name] = data_url(art)
+    front_art["/assets/theme/crt-back.webp"] = data_url(ROOT / "art/theme/crt-back.webp")
     js = "const previewArt = " + json.dumps(front_art) + ";\n" + js
-    js = js.replace("art.src = card.art &&", "art.src = previewArt[card.art] || (card.art &&")
-    js = js.replace(" : 'data:image/webp;base64,", " : 'data:image/webp;base64,")
-    # Close the extra parenthesis at the end of the source assignment.
-    lines = js.splitlines()
-    for index, line in enumerate(lines):
-        if "art.src = previewArt[card.art]" in line:
-            lines[index] = line[:-1] + ");"
-    js = "\n".join(lines)
+    js = js.replace("art.src = live?.backs?", "art.src = previewArt[registry?.decks?.[$('deck').value]?.card_back] || live?.backs?")
+    js = js.replace("function resolvedArt(source) { return source; }", "function resolvedArt(source) { return previewArt[source] || source; }")
     js = js.replace("registry = await (await fetch('/web/demo.json')).json();", "registry = " + (ROOT / "web/demo.json").read_text().strip() + ";")
     js = js.replace("} else { await refreshLive(); }", "} else { /* standalone demo: no server calls */ }")
     js = js.replace("const embedded = location.pathname.startsWith('/embed/');", "const embedded = false;")
     # Live login is intentionally unavailable in this downloadable artifact.
     begin = js.index("$('login-form').addEventListener('submit'")
-    end = js.index("async function init()", begin)
+    end = js.index("$('animate').addEventListener", begin)
     js = js[:begin] + "$('login-form').addEventListener('submit', e => e.preventDefault());\n" + js[end:]
     html = html.replace('<link rel="stylesheet" href="/web/table.css">', "<style>" + css + "</style>")
     html = html.replace('<script src="/web/table.js" defer></script>', "")

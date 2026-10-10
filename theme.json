@@ -7,6 +7,14 @@
     "card_back": "card-back.png",
     "spread": "spread-ritual.png"
   },
-  "deck_assets": {},
-  "palette": {"ink": "#0b1428", "gold": "#caa86a", "ivory": "#f4ead6"}
+  "deck_assets": {
+    "crt": {
+      "card_back": "crt-back.png"
+    }
+  },
+  "palette": {
+    "ink": "#0b1428",
+    "gold": "#caa86a",
+    "ivory": "#f4ead6"
+  }
 }

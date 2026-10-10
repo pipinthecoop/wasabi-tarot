@@ -1,6 +1,7 @@
 """Signed slash-command ingress and durable worker. No third-party runtime deps."""
 
 import hashlib
+import ipaddress
 import hmac
 import json
 import os
@@ -150,8 +151,10 @@ def handler(store: Store, secret: str, team: str, token: str = "", web: WebTable
             for filename in (root / "art/theme").glob("*"):
                 if filename.suffix in (".png", ".webp"):
                     static["/assets/theme/" + filename.name] = filename
-            for folder in ("dawn", "midnight"):
-                for filename in (root / "art" / folder).glob("*.png"):
+            for folder in ("dawn", "midnight", "crt"):
+                for filename in (root / "art" / folder).glob("*"):
+                    if filename.suffix not in (".png", ".gif"):
+                        continue
                     static[f"/assets/decks/{folder}/{filename.name}"] = filename
             file = static.get(path)
             if not file or not file.is_file():
@@ -310,6 +313,16 @@ def handler(store: Store, secret: str, team: str, token: str = "", web: WebTable
     return Handler
 
 
+def bind_address() -> tuple[str, int]:
+    """Explicit native bind; keep existing container default for compatibility."""
+    host = os.environ.get("BIND_HOST", "0.0.0.0")
+    ipaddress.ip_address(host)
+    port = int(os.environ.get("PORT", "8080"))
+    if not 1 <= port <= 65535:
+        raise ValueError("PORT must be 1–65535")
+    return host, port
+
+
 def main() -> None:
     for name in ("SLACK_SIGNING_SECRET", "SLACK_TEAM_ID", "SLACK_BOT_TOKEN"):
         if not os.environ.get(name):
@@ -322,14 +335,18 @@ def main() -> None:
     theme["enable_home"] = os.environ.get("ENABLE_APP_HOME", "0") == "1"
     theme["enable_work_objects"] = os.environ.get("ENABLE_WORK_OBJECTS", "0") == "1"
     theme["public_url"] = os.environ.get("PUBLIC_BASE_URL", "").rstrip("/")
-    store = Store(path, load_registry(os.environ.get("REGISTRY_PATH", "registry.json"), os.environ.get("ART_BASE_URL", "")), theme)
+    store = Store(
+        path,
+        load_registry(os.environ.get("REGISTRY_PATH", "registry.json"), os.environ.get("ART_BASE_URL", ""), os.environ.get("ANIMATED_ART", "1") == "1"),
+        theme,
+    )
     web = WebTable(store, os.environ.get("ENABLE_WEB_TABLE", "0") == "1", theme["public_url"])
     if theme["enable_work_objects"] and not web.origin:
         raise ValueError("Work Objects require PUBLIC_BASE_URL")
     if os.environ.get("RUN_WORKER", "1") == "1":
         Thread(target=worker, args=(store, os.environ["SLACK_BOT_TOKEN"]), daemon=True).start()
     server = ThreadingHTTPServer(
-        ("0.0.0.0", int(os.environ.get("PORT", "8080"))),
+        bind_address(),
         handler(store, os.environ["SLACK_SIGNING_SECRET"], os.environ["SLACK_TEAM_ID"], os.environ.get("SLACK_BOT_TOKEN", ""), web),
     )
     server.serve_forever()

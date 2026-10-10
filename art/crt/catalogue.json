@@ -1,0 +1,710 @@
+{
+  "deck": "crt",
+  "name": "Phosphor Arcana",
+  "license": "MIT",
+  "style": "Original tonal compositions translated into curved ASCII CRT phosphor",
+  "cards": [
+    {
+      "id": "major-0",
+      "name": "The Fool",
+      "scene_sha256": "051c04c5f60aefec7324217dedaa12ca53487058feab018e3b0968ff71a27e3b",
+      "motto": "STEP INTO THE UNKNOWN",
+      "svg": "major-0.svg",
+      "png": "major-0.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "major-1",
+      "name": "The Magician",
+      "scene_sha256": "fed6f0d127140dd7929da4cdf706991dcedcceb5a4c552b0607f80339221981f",
+      "motto": "AS ABOVE / SO BELOW",
+      "svg": "major-1.svg",
+      "png": "major-1.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "major-2",
+      "name": "The High Priestess",
+      "scene_sha256": "2eefe4caa5505fa89b7ac2cc7a880ab7d890d82cef13a93dc2129b972d0843b2",
+      "motto": "LISTEN BETWEEN THE SIGNALS",
+      "svg": "major-2.svg",
+      "png": "major-2.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "major-3",
+      "name": "The Empress",
+      "scene_sha256": "78ec0992e3c0661ea298301540b63f40522373afbf26ed2413898d7736147a95",
+      "motto": "LET LIFE TAKE ROOT",
+      "svg": "major-3.svg",
+      "png": "major-3.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "major-4",
+      "name": "The Emperor",
+      "scene_sha256": "0504baf15a99c8786347fc170ec5965d6bc898eeeb5c3534749aab8646a450e3",
+      "motto": "GIVE YOUR VISION STRUCTURE",
+      "svg": "major-4.svg",
+      "png": "major-4.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "major-5",
+      "name": "The Hierophant",
+      "scene_sha256": "c7cbfe3217cd0d6ae3cdad433e71c275abff036abeef95241e0f0be8533bb6f1",
+      "motto": "EXAMINE THE INHERITANCE",
+      "svg": "major-5.svg",
+      "png": "major-5.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "major-6",
+      "name": "The Lovers",
+      "scene_sha256": "aa10fea3f8966e241680332cbe06c9017819b26e94d320493795855be6ca8afd",
+      "motto": "CHOOSE WHAT YOU HONOR",
+      "svg": "major-6.svg",
+      "png": "major-6.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "major-7",
+      "name": "The Chariot",
+      "scene_sha256": "909e5dfa204600a097dc506def4ddc232f38d1edb515d8deba5354d4376d4998",
+      "motto": "DIRECT THE CURRENT",
+      "svg": "major-7.svg",
+      "png": "major-7.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "major-8",
+      "name": "Strength",
+      "scene_sha256": "c7e4ed6e1fdc75dddc3bf650f72e6c67a5e0dd4d69bb470c16c2a23e6775a2b3",
+      "motto": "COURAGE WITHOUT FORCE",
+      "svg": "major-8.svg",
+      "png": "major-8.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "major-9",
+      "name": "The Hermit",
+      "scene_sha256": "cd51175749be52da1a4d2aab371144a210754817ee560b6681a6740ac598d34f",
+      "motto": "CARRY YOUR OWN LIGHT",
+      "svg": "major-9.svg",
+      "png": "major-9.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "major-10",
+      "name": "Wheel of Fortune",
+      "scene_sha256": "45f8fb314d58a5e0dd362c373f8314a50896b3eb0c267c170a69c195ef15ec23",
+      "motto": "EVERYTHING MOVES",
+      "svg": "major-10.svg",
+      "png": "major-10.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "major-11",
+      "name": "Justice",
+      "scene_sha256": "b3330a974cb18c325118a9416e04ac8d357078a44ab54d4790b0c7ee3668aaf7",
+      "motto": "WEIGH THE CONSEQUENCES",
+      "svg": "major-11.svg",
+      "png": "major-11.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "major-12",
+      "name": "The Hanged One",
+      "scene_sha256": "03520bc8b77cb7302e4d176bfad5ff2b18cbe1b3cc85542ae720c6824fbc099a",
+      "motto": "CHANGE YOUR PERSPECTIVE",
+      "svg": "major-12.svg",
+      "png": "major-12.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "major-13",
+      "name": "Death",
+      "scene_sha256": "db45d48c92e3e935a0d664089f823089e6aeaae25164a8ec73777d5fb81c58a8",
+      "motto": "MAKE ROOM FOR THE NEW",
+      "svg": "major-13.svg",
+      "png": "major-13.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "major-14",
+      "name": "Temperance",
+      "scene_sha256": "866168ccb1fe1d31795422f5ab349786ea5f97b83d634fd078cb9cdc8eb39468",
+      "motto": "LET DIFFERENCE FLOW",
+      "svg": "major-14.svg",
+      "png": "major-14.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "major-15",
+      "name": "The Devil",
+      "scene_sha256": "32e5992851ab7d0d56e8b9b9078ad9f46c8cacb6adf3a06056bea70d02ba36e8",
+      "motto": "NOTICE WHAT HOLDS YOU",
+      "svg": "major-15.svg",
+      "png": "major-15.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "major-16",
+      "name": "The Tower",
+      "scene_sha256": "3d53e7870b8d518e3545ef17255e70317af1ecd966500478dc04a8e587281241",
+      "motto": "WHAT FALLS CAN BE REBUILT",
+      "svg": "major-16.svg",
+      "png": "major-16.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "major-17",
+      "name": "The Star",
+      "scene_sha256": "9f0f8572e68bfcb7211f40bb34185244d89e65e44c6eff3b868941a1d068b63a",
+      "motto": "KEEP A SMALL HOPE",
+      "svg": "major-17.svg",
+      "png": "major-17.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "major-18",
+      "name": "The Moon",
+      "scene_sha256": "776d8ba5a9d58f21233bb540f8d81f89bcd6863e2803b783bdad9d45b78e6163",
+      "motto": "TRUST SLOW REVELATION",
+      "svg": "major-18.svg",
+      "png": "major-18.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "major-19",
+      "name": "The Sun",
+      "scene_sha256": "73192b32e8014de055fe8bb430306a85210ae903b7ac11cdc2eab850820c6ab3",
+      "motto": "WELCOME THE LIGHT",
+      "svg": "major-19.svg",
+      "png": "major-19.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "major-20",
+      "name": "Judgement",
+      "scene_sha256": "be51dc1cbd4477b56ee8aa672d2c4f1eba9b0b7b1a8144e861da76635b95d1f6",
+      "motto": "ANSWER THE CALL",
+      "svg": "major-20.svg",
+      "png": "major-20.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "major-21",
+      "name": "The World",
+      "scene_sha256": "6ec5abdc6187b012c1c33e4b3f9230db5fbce45669ff91262aa42c3a1564ff22",
+      "motto": "THE CYCLE IS WHOLE",
+      "svg": "major-21.svg",
+      "png": "major-21.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "wands-ace",
+      "name": "Ace of Wands",
+      "scene_sha256": "4875932074a213a99cc5a1dcb032cf87114dd3688b300677c80930bed1cc5937",
+      "motto": "A SPARK BECOMES A PATH",
+      "svg": "wands-ace.svg",
+      "png": "wands-ace.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "wands-two",
+      "name": "Two of Wands",
+      "scene_sha256": "a73dafe2753e8f442c32341b38c588df4656b62f90dce13c341a9c27d7dba085",
+      "motto": "HOLD A WORLD OF POSSIBILITY",
+      "svg": "wands-two.svg",
+      "png": "wands-two.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "wands-three",
+      "name": "Three of Wands",
+      "scene_sha256": "b120b4cbc54850470899353a6ea2a5e1769d03b1f8594123fbc1e27cef79419d",
+      "motto": "WAIT FOR THE RETURNING TIDE",
+      "svg": "wands-three.svg",
+      "png": "wands-three.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "wands-four",
+      "name": "Four of Wands",
+      "scene_sha256": "4a42c44d18f8d73173188756aac3e40d748c11fed9280d4316b45ed82c83c07f",
+      "motto": "MAKE A PLACE FOR JOY",
+      "svg": "wands-four.svg",
+      "png": "wands-four.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "wands-five",
+      "name": "Five of Wands",
+      "scene_sha256": "0804a24fa7f3128d4f303a76147d46b0e27d76de3a80171275693dc36f448f26",
+      "motto": "LET DIFFERENT FIRES MEET",
+      "svg": "wands-five.svg",
+      "png": "wands-five.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "wands-six",
+      "name": "Six of Wands",
+      "scene_sha256": "c76c5ea68d1694dd7f241421bb083df5d310ae53c290704343c9202857181136",
+      "motto": "CARRY THE LAUREL LIGHTLY",
+      "svg": "wands-six.svg",
+      "png": "wands-six.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "wands-seven",
+      "name": "Seven of Wands",
+      "scene_sha256": "8656ca2867fb14fb174cdf77afa855d507cd5fc0367749072290adaa80daf88f",
+      "motto": "STAND FOR WHAT YOU VALUE",
+      "svg": "wands-seven.svg",
+      "png": "wands-seven.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "wands-eight",
+      "name": "Eight of Wands",
+      "scene_sha256": "2fde418a0c468dacdf96e6432768aba31b31de63256dc5038874f7a9813cc25e",
+      "motto": "THE CURRENT IS MOVING",
+      "svg": "wands-eight.svg",
+      "png": "wands-eight.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "wands-nine",
+      "name": "Nine of Wands",
+      "scene_sha256": "f24ec38c50b0475eef370d8bd1dcac411e1119637f5a20fe6f7ae2bc0eac9a74",
+      "motto": "PROTECT THE LAST FLAME",
+      "svg": "wands-nine.svg",
+      "png": "wands-nine.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "wands-ten",
+      "name": "Ten of Wands",
+      "scene_sha256": "86ca7a9dc54282bc0b1e9e5fa7e1263dc6fa6b1d8f4cbee20caec62413c3ec72",
+      "motto": "PUT DOWN WHAT IS TOO MUCH",
+      "svg": "wands-ten.svg",
+      "png": "wands-ten.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "wands-page",
+      "name": "Page of Wands",
+      "scene_sha256": "d8402e6395132a50a3e3da6b8f19b87df94a4ad373f3b213566fcf1253e2ed92",
+      "motto": "FOLLOW THE FIRST SPARK",
+      "svg": "wands-page.svg",
+      "png": "wands-page.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "wands-knight",
+      "name": "Knight of Wands",
+      "scene_sha256": "b9c212e6c85a60b07ac8de436fd3ea21196577cad63c7c5b1aef4044064d1e21",
+      "motto": "MOVE WITH YOUR FIRE",
+      "svg": "wands-knight.svg",
+      "png": "wands-knight.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "wands-queen",
+      "name": "Queen of Wands",
+      "scene_sha256": "fb944e27bc2983ff6af13f3fd4318574179bc5919b74c408325c98f3061f1ced",
+      "motto": "LET YOUR WARMTH BE SEEN",
+      "svg": "wands-queen.svg",
+      "png": "wands-queen.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "wands-king",
+      "name": "King of Wands",
+      "scene_sha256": "97809367150c59b8cbb2abc7da62906a47af51d82d221714b859bd540ba201e0",
+      "motto": "GIVE THE FIRE A PURPOSE",
+      "svg": "wands-king.svg",
+      "png": "wands-king.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "cups-ace",
+      "name": "Ace of Cups",
+      "scene_sha256": "15afcf9018cbe2cd81d07c0a99d0475ca398dde4c6b452be609e1301ee85b638",
+      "motto": "LET THE HEART OVERFLOW",
+      "svg": "cups-ace.svg",
+      "png": "cups-ace.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "cups-two",
+      "name": "Two of Cups",
+      "scene_sha256": "aa515e32f6d86ed09ba76dbdc347801e0bf89218a2e1fd0b62aa169e29a35170",
+      "motto": "MEET EACH OTHER CLEARLY",
+      "svg": "cups-two.svg",
+      "png": "cups-two.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "cups-three",
+      "name": "Three of Cups",
+      "scene_sha256": "06c9a8aab415a300425bffb9a45d5ca6f0827736a905a7db8bb717a2a9884ab7",
+      "motto": "JOY GROWS WHEN IT IS SHARED",
+      "svg": "cups-three.svg",
+      "png": "cups-three.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "cups-four",
+      "name": "Four of Cups",
+      "scene_sha256": "f35a0023417e6308e1cc9958b2e5c13ad16e2af8e03016f8498a318364f00596",
+      "motto": "LOOK AGAIN AT THE OFFER",
+      "svg": "cups-four.svg",
+      "png": "cups-four.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "cups-five",
+      "name": "Five of Cups",
+      "scene_sha256": "2bd775047c0513e232e935965d4bf3525a3b122fcbbeff34b90c169fb08b28ad",
+      "motto": "HONOR WHAT REMAINS",
+      "svg": "cups-five.svg",
+      "png": "cups-five.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "cups-six",
+      "name": "Six of Cups",
+      "scene_sha256": "09c69d5f4c15885af0b3f1e9861e7b67d9852c375067e4b90f7d07448d5bade7",
+      "motto": "KINDNESS HAS A MEMORY",
+      "svg": "cups-six.svg",
+      "png": "cups-six.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "cups-seven",
+      "name": "Seven of Cups",
+      "scene_sha256": "d804efae68098936fe1ba4aeb8dcac3ac1f9c62e788ba736387e0bcb011548b3",
+      "motto": "CHOOSE AMONG THE MIRAGES",
+      "svg": "cups-seven.svg",
+      "png": "cups-seven.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "cups-eight",
+      "name": "Eight of Cups",
+      "scene_sha256": "8c3e5ca6c16cd4267f07685ec964685dc8115d46d1b3cafd31241bb697dc4223",
+      "motto": "LEAVE WHAT CANNOT NOURISH",
+      "svg": "cups-eight.svg",
+      "png": "cups-eight.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "cups-nine",
+      "name": "Nine of Cups",
+      "scene_sha256": "939d3788d7e8655e600ddd9b2fdd11c2f8021ae36e86c65ba7c83809c645b4c5",
+      "motto": "RECEIVE THE SIMPLE PLEASURES",
+      "svg": "cups-nine.svg",
+      "png": "cups-nine.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "cups-ten",
+      "name": "Ten of Cups",
+      "scene_sha256": "d0c5a27929283240713a6a35de74ea4ba771a385bbd587256eb99cbca668a9b6",
+      "motto": "MAKE A HOME FOR BELONGING",
+      "svg": "cups-ten.svg",
+      "png": "cups-ten.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "cups-page",
+      "name": "Page of Cups",
+      "scene_sha256": "8de7020693f055351d0808dc6451074a240c72fd7f31117e4bb03e7442af7a70",
+      "motto": "WELCOME THE UNEXPECTED",
+      "svg": "cups-page.svg",
+      "png": "cups-page.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "cups-knight",
+      "name": "Knight of Cups",
+      "scene_sha256": "7821ec463a0d87555742953997ce60eebef0bb135f330c62f1c675ebedbdfc63",
+      "motto": "OFFER WHAT YOU FEEL",
+      "svg": "cups-knight.svg",
+      "png": "cups-knight.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "cups-queen",
+      "name": "Queen of Cups",
+      "scene_sha256": "351e81e76228fd8c542f9c415df3833dffe04dc2c09cb26309a744563e562e57",
+      "motto": "HOLD FEELING WITH CARE",
+      "svg": "cups-queen.svg",
+      "png": "cups-queen.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "cups-king",
+      "name": "King of Cups",
+      "scene_sha256": "87970cba636571688feb5aac00e1770bbe8c3094b4a83dfc10922ac99b9ac0b4",
+      "motto": "STAY STEADY IN THE TIDE",
+      "svg": "cups-king.svg",
+      "png": "cups-king.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "swords-ace",
+      "name": "Ace of Swords",
+      "scene_sha256": "ebe13a234b63caf6cc5d0ed2ac400d1cad00859fd24d4b0d06132e7c05e1f3c8",
+      "motto": "LET THE TRUTH CUT CLEAR",
+      "svg": "swords-ace.svg",
+      "png": "swords-ace.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "swords-two",
+      "name": "Two of Swords",
+      "scene_sha256": "64a0f00625d4277a490ae293eaa0b4dcb4e3ac6df073ecf55a4649e8b4530a52",
+      "motto": "PAUSE BETWEEN TWO TRUTHS",
+      "svg": "swords-two.svg",
+      "png": "swords-two.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "swords-three",
+      "name": "Three of Swords",
+      "scene_sha256": "fe19d6550402af0c4eecef29ae5dfb3080fa183b1bdc8ec8edd6985f8beeaf0a",
+      "motto": "GIVE THE ACHE A NAME",
+      "svg": "swords-three.svg",
+      "png": "swords-three.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "swords-four",
+      "name": "Four of Swords",
+      "scene_sha256": "45ebbd3aee55a90a272ba8ee50674905298190da9fa14033e29bb8456317200d",
+      "motto": "REST IS PART OF THE WORK",
+      "svg": "swords-four.svg",
+      "png": "swords-four.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "swords-five",
+      "name": "Five of Swords",
+      "scene_sha256": "7979bcc8a7116a0fa14326512a7f151b572ddf69ffb3eb76e0c416c0bde39fa1",
+      "motto": "CONSIDER THE COST OF WINNING",
+      "svg": "swords-five.svg",
+      "png": "swords-five.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "swords-six",
+      "name": "Six of Swords",
+      "scene_sha256": "1f0c68a0891f133dfdd530fd034b6036736edb4acd3ed14b37859f9888588855",
+      "motto": "CROSS INTO QUIETER WATERS",
+      "svg": "swords-six.svg",
+      "png": "swords-six.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "swords-seven",
+      "name": "Seven of Swords",
+      "scene_sha256": "ef46240d290e695a2f3d27568b4e220a58054def8825616c9edf63fcf7c4fa74",
+      "motto": "CHOOSE YOUR TACTICS CAREFULLY",
+      "svg": "swords-seven.svg",
+      "png": "swords-seven.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "swords-eight",
+      "name": "Eight of Swords",
+      "scene_sha256": "b170257dd2a9929c09161937934a5f02cafd6aba9ad2e77c330e198930b8aa95",
+      "motto": "LOOK FOR THE UNBOUND PATH",
+      "svg": "swords-eight.svg",
+      "png": "swords-eight.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "swords-nine",
+      "name": "Nine of Swords",
+      "scene_sha256": "bb14b0897404e6eebbfe947a98f545ed4dedb2081fbb2d38570b70a9d50b239e",
+      "motto": "NIGHT IS NOT THE WHOLE STORY",
+      "svg": "swords-nine.svg",
+      "png": "swords-nine.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "swords-ten",
+      "name": "Ten of Swords",
+      "scene_sha256": "3c6488db6dcde455f9ab2ef5014a995a3711ed3526492ecf0d9d55a8a50f4003",
+      "motto": "LET THE END BECOME AN END",
+      "svg": "swords-ten.svg",
+      "png": "swords-ten.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "swords-page",
+      "name": "Page of Swords",
+      "scene_sha256": "e04c9a683aa489615d421dcbbe987e1f7b24fd2420ab86b56f5c7a4613debc9f",
+      "motto": "ASK THE NEXT QUESTION",
+      "svg": "swords-page.svg",
+      "png": "swords-page.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "swords-knight",
+      "name": "Knight of Swords",
+      "scene_sha256": "77e23a894b80963d57f54f0be3b09bdf549ccbfefb925aa9dde7923dae35d725",
+      "motto": "MATCH SPEED WITH JUDGEMENT",
+      "svg": "swords-knight.svg",
+      "png": "swords-knight.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "swords-queen",
+      "name": "Queen of Swords",
+      "scene_sha256": "f0d753337e65abbae971c707b95a205e3c445ca8415c4665daa2a27d42310940",
+      "motto": "KEEP A CLEAR BOUNDARY",
+      "svg": "swords-queen.svg",
+      "png": "swords-queen.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "swords-king",
+      "name": "King of Swords",
+      "scene_sha256": "be62ef0430fd6d5e0f7902e00bd6afa1e36f5dd2a1612ead1a5ac03b74aa082e",
+      "motto": "USE CLARITY WITH RESPONSIBILITY",
+      "svg": "swords-king.svg",
+      "png": "swords-king.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "pentacles-ace",
+      "name": "Ace of Pentacles",
+      "scene_sha256": "6b84a86fc7f6cad4c0dfbcc9489ca7dee09fd0f46ab7909a142a7c8aa763d666",
+      "motto": "GIVE POSSIBILITY A PLACE",
+      "svg": "pentacles-ace.svg",
+      "png": "pentacles-ace.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "pentacles-two",
+      "name": "Two of Pentacles",
+      "scene_sha256": "eff9ed22ee232d255118c7bc121449cb65ad01f9e9dea2c75d3b02c8b3ddf28d",
+      "motto": "LEARN THE RHYTHM OF BALANCE",
+      "svg": "pentacles-two.svg",
+      "png": "pentacles-two.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "pentacles-three",
+      "name": "Three of Pentacles",
+      "scene_sha256": "b661cebd19a561ff4411378d88f82755959eadea1b03c15122011f8d777ebbee",
+      "motto": "LET DIFFERENT SKILLS BUILD",
+      "svg": "pentacles-three.svg",
+      "png": "pentacles-three.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "pentacles-four",
+      "name": "Four of Pentacles",
+      "scene_sha256": "ead354ef25cff7c3fb4cd52c32cc75012cd0c15d794d9c0255d4c4fc3bd241a5",
+      "motto": "HOLD WITHOUT CLOSING YOUR HAND",
+      "svg": "pentacles-four.svg",
+      "png": "pentacles-four.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "pentacles-five",
+      "name": "Five of Pentacles",
+      "scene_sha256": "0bb080914d40693ac65dde75736affaa3d7b0a272d74a912e74130cd49ca7d1b",
+      "motto": "LOOK FOR THE WELCOMING DOOR",
+      "svg": "pentacles-five.svg",
+      "png": "pentacles-five.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "pentacles-six",
+      "name": "Six of Pentacles",
+      "scene_sha256": "89c920b15515defafc77ed1da141b72e1db94d80ee1a34ff610f9ade8916922e",
+      "motto": "LET RESOURCES CIRCULATE",
+      "svg": "pentacles-six.svg",
+      "png": "pentacles-six.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "pentacles-seven",
+      "name": "Seven of Pentacles",
+      "scene_sha256": "84c29735bae577eb9363561ba24b19ea0074aa39b6b507c01bbac17962043bf9",
+      "motto": "TEND WHAT TAKES ITS TIME",
+      "svg": "pentacles-seven.svg",
+      "png": "pentacles-seven.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "pentacles-eight",
+      "name": "Eight of Pentacles",
+      "scene_sha256": "d9a8a14981c6ba69748c7c2e9fdf104a45b9eb8ed6a0f9879f6a4f0a18d4433e",
+      "motto": "MAKE A PRACTICE OF CARE",
+      "svg": "pentacles-eight.svg",
+      "png": "pentacles-eight.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "pentacles-nine",
+      "name": "Nine of Pentacles",
+      "scene_sha256": "b290cc4c87d84094abeacc3aa3591f6eadfce3bc972d4c20ab3472e206e6eb22",
+      "motto": "ENJOY WHAT YOU HAVE CULTIVATED",
+      "svg": "pentacles-nine.svg",
+      "png": "pentacles-nine.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "pentacles-ten",
+      "name": "Ten of Pentacles",
+      "scene_sha256": "588a6267423876015f2d1e78d8f203967f6254ae76df99329e4ff9d0f662eefd",
+      "motto": "BUILD BEYOND YOURSELF",
+      "svg": "pentacles-ten.svg",
+      "png": "pentacles-ten.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "pentacles-page",
+      "name": "Page of Pentacles",
+      "scene_sha256": "5b95b2f0fd720c6fc4bc94ef3c1f687b5acec9342fb6454113122e93ea8c7195",
+      "motto": "BEGIN WITH A SMALL PRACTICE",
+      "svg": "pentacles-page.svg",
+      "png": "pentacles-page.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "pentacles-knight",
+      "name": "Knight of Pentacles",
+      "scene_sha256": "66ada8090639261e19829297db8d046417584b5c01a356e118ab746b4bdcd8b6",
+      "motto": "RETURN TO THE STEADY WORK",
+      "svg": "pentacles-knight.svg",
+      "png": "pentacles-knight.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "pentacles-queen",
+      "name": "Queen of Pentacles",
+      "scene_sha256": "21f6f284435c5721857e353526454a022d18f9d3cc418d300bf63367a46cbfea",
+      "motto": "MAKE COMFORT A KINDNESS",
+      "svg": "pentacles-queen.svg",
+      "png": "pentacles-queen.png",
+      "style": "modeled ASCII phosphor"
+    },
+    {
+      "id": "pentacles-king",
+      "name": "King of Pentacles",
+      "scene_sha256": "8750e7596b53cfcd33514652aae76c114875b44b457a04c6feadad2594f29503",
+      "motto": "KEEP WHAT YOU BUILD ALIVE",
+      "svg": "pentacles-king.svg",
+      "png": "pentacles-king.png",
+      "style": "modeled ASCII phosphor"
+    }
+  ]
+}

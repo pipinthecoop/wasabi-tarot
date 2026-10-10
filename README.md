@@ -68,4 +68,7 @@ The wheel packages the Python runtime; deploy with the registry alongside it, or
 
 Slack protocol references: [request verification](https://docs.slack.dev/authentication/verifying-requests-from-slack/), [slash commands](https://docs.slack.dev/interactivity/implementing-slash-commands/), [posting normal messages](https://docs.slack.dev/reference/methods/chat.postMessage/).
 
-Publication baseline for this update: [pipinthecoop/wasabi-tarot](https://github.com/pipinthecoop/wasabi-tarot), commit 7b1ced1fab61c55413d215cf315c90b862bee6f1. The parent must compare the current head and preserve concurrent changes when applying the changed-file package. This update has not been published or deployed here.
+
+Phosphor Arcana (`crt`) adds 78 original code-drawn ASCII green CRT scenes, distinct realistic CRT surface GIF loops, static PNG fallbacks, and a matching back. See [CRT-HANDOFF.md](CRT-HANDOFF.md) for public asset hosting, deck selection, regeneration, QA, and the Wasabi deployment checklist.
+
+See [HOSTING-RUNBOOK.md](HOSTING-RUNBOOK.md) for loopback Mac hosting and the separate no-secret asset/demo stage.

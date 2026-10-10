@@ -7,3 +7,7 @@ include theme.json THEME-HANDOFF.md slack-work-objects.optional.json
 recursive-include art/theme *.webp
 recursive-include web *.html *.css *.js *.json
 recursive-include art/theme *.md
+include CRT-HANDOFF.md
+recursive-include art/crt *.json
+recursive-include art/crt *.gif
+include HOSTING-RUNBOOK.md

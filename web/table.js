@@ -3,6 +3,12 @@ const $ = id => document.getElementById(id);
 const embedded = location.pathname.startsWith('/embed/');
 let registry, live = null, busy = false, revealed = false;
 const shoes = {};
+let displayedCards = null, displayedPositions = null;
+const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+function artSource(card) {
+  return $('animate').checked ? card.art : (card.static_art || card.art);
+}
+function resolvedArt(source) { return source; }
 const status = text => { $('status').textContent = text; };
 function shuffleArray(items) {
   const copy = [...items];
@@ -28,6 +34,7 @@ function deckState() {
 }
 function backs() {
   revealed = false;
+  displayedCards = null; displayedPositions = null;
   $('reading').hidden = true;
   $('cards').replaceChildren();
   const names = positions() || ['Focus'];
@@ -35,7 +42,7 @@ function backs() {
     const slot = node('div', undefined, 'card-slot');
     const card = node('div', undefined, 'card');
     const art = node('img');
-    art.src = live?.backs?.[$('deck').value] || '/assets/theme/card-back.webp';
+    art.src = live?.backs?.[$('deck').value] || registry?.decks?.[$('deck').value]?.card_back || '/assets/theme/card-back.webp';
     art.alt = 'Face-down celestial card: ' + (name || 'Your position');
     card.append(art); slot.append(card, node('small', name || 'Your position')); $('cards').append(slot);
   }
@@ -50,12 +57,15 @@ function counts() {
 }
 function reveal(cards, names) {
   revealed = true;
+  displayedCards = cards; displayedPositions = names;
   $('cards').replaceChildren(); $('meanings').replaceChildren();
   cards.forEach((card, index) => {
     const slot = node('div', undefined, 'card-slot');
     const face = node('div', undefined, 'card');
     const art = node('img');
-    art.src = card.art && (card.art.startsWith('https://') || card.art.startsWith('/assets/')) ? card.art : '/assets/theme/card-back.webp';
+    const source = artSource(card);
+    art.src = resolvedArt(source && (source.startsWith('https://') || source.startsWith('/assets/')) ? source : '/assets/theme/card-back.webp');
+    art.onerror = () => { if (card.static_art && art.dataset.fallback !== '1') { art.dataset.fallback = '1'; art.src = resolvedArt(card.static_art); } };
     art.alt = names[index] + ': ' + card.name;
     face.append(art, node('span', card.name, 'card-name'));
     slot.append(face, node('small', names[index])); $('cards').append(slot);
@@ -115,7 +125,8 @@ async function ritual(mode) {
     } else if (mode === 'draw') {
       const shoe = deckState();
       if (shoe.draw.length < names.length) { status('The deck rests: too few cards remain. Explicitly shuffle to begin a new cycle.'); return; }
-      const cards = names.map(() => { const id = shoe.draw.pop(); shoe.discard.push(id); const card = registry.cards.find(c => c.id === id); return {...card, art: '/assets/decks/' + $('deck').value + '/' + id + '.png'}; });
+      const cards = names.map(() => { const id = shoe.draw.pop(); shoe.discard.push(id); const card = registry.cards.find(c => c.id === id); const base = '/assets/decks/' + $('deck').value + '/' + id;
+        return {...card, art: base + '.' + (registry.decks[$('deck').value].art_format || 'png'), static_art: base + '.png'}; });
       reveal(cards, names); status('Demo reading revealed. Your Slack deck is untouched.');
     } else if (mode === 'shuffle') {
       const shoe = deckState(); shoe.draw = shuffleArray(registry.decks[$('deck').value].cards); shoe.discard = []; shoe.cycle++; backs(); status('Demo deck shuffled. A new cycle begins; your Slack deck is untouched.');
@@ -156,9 +167,16 @@ $('login-form').addEventListener('submit', async e => {
     await refreshLive(); $('login').close(); backs(); status('Your verified Slack channel table is open.');
   } catch (error) { $('login-error').textContent = error.message; }
 });
+$('animate').addEventListener('change', () => { if (displayedCards) reveal(displayedCards, displayedPositions); });
+motionPreference.addEventListener('change', e => { $('animate').checked = !e.matches; if (displayedCards) reveal(displayedCards, displayedPositions); });
 async function init() {
+  $('animate').checked = !motionPreference.matches;
   registry = await (await fetch('/web/demo.json')).json();
-  for (const [id, spec] of Object.entries(registry.decks)) shoes[id] = {draw: shuffleArray(spec.cards), discard: [], cycle: 1};
+  $('deck').replaceChildren();
+  for (const [id, spec] of Object.entries(registry.decks)) {
+    shoes[id] = {draw: shuffleArray(spec.cards), discard: [], cycle: 1};
+    const option = node('option', spec.name); option.value = id; $('deck').append(option);
+  }
   if (embedded) {
     $('mode').textContent = 'Read-only embedded preview · no channel data or mutations';
     $('connect').hidden = true;

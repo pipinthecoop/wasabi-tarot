@@ -120,7 +120,15 @@ class Store:
                 "deck": deck,
                 "positions": positions,
                 "remaining": len(draw),
-                "card_details": [{"name": cards[c]["name"], "meaning": cards[c]["meaning"], "art": cards[c].get("art", {}).get(deck, "")} for c in picked],
+                "card_details": [
+                    {
+                        "name": cards[c]["name"],
+                        "meaning": cards[c]["meaning"],
+                        "art": cards[c].get("art", {}).get(deck, ""),
+                        "static_art": cards[c].get("static_art", {}).get(deck, ""),
+                    }
+                    for c in picked
+                ],
             }
         else:
             notice = " Membership changed; shuffle explicitly to adopt it." if membership_changed and action == "status" else ""
@@ -151,18 +159,20 @@ class Store:
             self.command(key, spec["team"], spec["channel"], spec["user"], shlex.join(["draw", spec["deck"], spec["spread"]]))
 
 
-def load_registry(path: str, art_base_url: str = "") -> dict:
+def load_registry(path: str, art_base_url: str = "", animated_art: bool = True) -> dict:
     data = json.loads(Path(path).read_text())
     ids = [c["id"] for c in data["cards"]]
     if len(ids) != len(set(ids)) or not ids:
         raise ValueError("Card IDs must be unique and nonempty")
     for deck in data["decks"].values():
+        if deck.get("art_format", "png") not in ("png", "gif") or deck.get("static_art_format", "png") != "png":
+            raise ValueError("Art format must be png or gif with a png static fallback")
         if not deck["cards"] or len(deck["cards"]) != len(set(deck["cards"])) or not set(deck["cards"]) <= set(ids):
             raise ValueError("Invalid deck card membership")
     for card in data["cards"]:
         if not card["name"] or len(card["meaning"]) > 1000:
             raise ValueError("Invalid card text")
-        if any(not url.startswith("https://") for url in card.get("art", {}).values()):
+        if any(not url.startswith("https://") for mapping in ("art", "static_art") for url in card.get(mapping, {}).values()):
             raise ValueError("Art URLs must use HTTPS")
     if art_base_url:
         url = urlsplit(art_base_url)
@@ -171,5 +181,9 @@ def load_registry(path: str, art_base_url: str = "") -> dict:
         for card in data["cards"]:
             for deck in data["decks"]:
                 if card["id"] in data["decks"][deck]["cards"]:
-                    card.setdefault("art", {}).setdefault(deck, f"{art_base_url.rstrip('/')}/{deck}/{card['id']}.png")
+                    spec = data["decks"][deck]
+                    extension = spec.get("art_format", "png") if animated_art else "png"
+                    card.setdefault("art", {}).setdefault(deck, f"{art_base_url.rstrip('/')}/{deck}/{card['id']}.{extension}")
+                    if spec.get("art_format") == "gif":
+                        card.setdefault("static_art", {}).setdefault(deck, f"{art_base_url.rstrip('/')}/{deck}/{card['id']}.png")
     return data

@@ -1,0 +1,2815 @@
+{
+  "loop": 0,
+  "palette_colors": 48,
+  "style": "Approved realistic CRT surface; illustration geometry fixed",
+  "cards": [
+    {
+      "frames": 23,
+      "duration": 80,
+      "phase": 0.13,
+      "scan_cycles": 1,
+      "glow": [
+        230,
+        165,
+        415,
+        455
+      ],
+      "harmonics": [
+        2,
+        7
+      ],
+      "glow_cycles": 2,
+      "band_gain": 0.25,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 3340460560,
+      "artwork_geometry": "fixed",
+      "id": "major-0",
+      "file": "major-0.gif",
+      "bytes": 1128439,
+      "sha256": "7c12677dfea34d9e7e9a3d24f888c9d0883244343297010a929673162eecab63"
+    },
+    {
+      "frames": 22,
+      "duration": 110,
+      "phase": 0.31093279839518556,
+      "scan_cycles": 1,
+      "glow": [
+        255.568,
+        278.74,
+        345.28000000000003,
+        320.32
+      ],
+      "harmonics": [
+        4,
+        9
+      ],
+      "glow_cycles": 1,
+      "band_gain": 0.25,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 1038292062,
+      "artwork_geometry": "fixed",
+      "id": "major-1",
+      "file": "major-1.gif",
+      "bytes": 943033,
+      "sha256": "679809f9e1fbb28c78d8de0c4bb69064778f72997ebc7bd41bc7d1141af7d722"
+    },
+    {
+      "frames": 23,
+      "duration": 100,
+      "phase": 0.57,
+      "scan_cycles": 1,
+      "glow": [
+        162,
+        218,
+        425,
+        625
+      ],
+      "harmonics": [
+        5,
+        10
+      ],
+      "glow_cycles": 2,
+      "band_gain": 0.27,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 3031831423,
+      "artwork_geometry": "fixed",
+      "id": "major-2",
+      "file": "major-2.gif",
+      "bytes": 1260512,
+      "sha256": "162891ec268c60310def66cbdfad7fb67c4caf89ebf68820c079c7ac33bcc006"
+    },
+    {
+      "frames": 23,
+      "duration": 130,
+      "phase": 0.3831494483450351,
+      "scan_cycles": 1,
+      "glow": [
+        108.4,
+        653.905,
+        485.392,
+        758.8
+      ],
+      "harmonics": [
+        4,
+        11
+      ],
+      "glow_cycles": 2,
+      "band_gain": 0.26,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 640170094,
+      "artwork_geometry": "fixed",
+      "id": "major-3",
+      "file": "major-3.gif",
+      "bytes": 1207673,
+      "sha256": "fc9f6b28e65321bdb3cec1ad3401e31f2b7ff5b71a458c2f743befe3df7e2226"
+    },
+    {
+      "frames": 22,
+      "duration": 130,
+      "phase": 0.563691073219659,
+      "scan_cycles": 2,
+      "glow": [
+        153.76,
+        318.42999999999995,
+        434.992,
+        378.90999999999997
+      ],
+      "harmonics": [
+        3,
+        11
+      ],
+      "glow_cycles": 1,
+      "band_gain": 0.28,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 194546169,
+      "artwork_geometry": "fixed",
+      "id": "major-4",
+      "file": "major-4.gif",
+      "bytes": 881220,
+      "sha256": "9d20d44d10c319176e198b1305695f356e302c711b228d3cc4626477b1e1f567"
+    },
+    {
+      "frames": 23,
+      "duration": 90,
+      "phase": 0.79839518555667,
+      "scan_cycles": 1,
+      "glow": [
+        179.96800000000002,
+        293.86,
+        419.872,
+        476.245
+      ],
+      "harmonics": [
+        2,
+        7
+      ],
+      "glow_cycles": 2,
+      "band_gain": 0.27,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 122942860,
+      "artwork_geometry": "fixed",
+      "id": "major-5",
+      "file": "major-5.gif",
+      "bytes": 1220104,
+      "sha256": "b2199117f069b86587fa78ac98f6bf044c1aabc4aea934cc16e9a46e4f32746b"
+    },
+    {
+      "frames": 22,
+      "duration": 120,
+      "phase": 0.24172517552657974,
+      "scan_cycles": 1,
+      "glow": [
+        126.544,
+        202.195,
+        478.336,
+        401.59
+      ],
+      "harmonics": [
+        2,
+        10
+      ],
+      "glow_cycles": 1,
+      "band_gain": 0.26,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 4013753748,
+      "artwork_geometry": "fixed",
+      "id": "major-6",
+      "file": "major-6.gif",
+      "bytes": 1060932,
+      "sha256": "ca5b9bfdaa611e74bf2d70554db9fe938022be85a1fa0adbdfaf3e513a88b427"
+    },
+    {
+      "frames": 24,
+      "duration": 120,
+      "phase": 0.518555667001003,
+      "scan_cycles": 1,
+      "glow": [
+        151.744,
+        359.065,
+        449.104,
+        403.48
+      ],
+      "harmonics": [
+        2,
+        10
+      ],
+      "glow_cycles": 3,
+      "band_gain": 0.22,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 1004660468,
+      "artwork_geometry": "fixed",
+      "id": "major-7",
+      "file": "major-7.gif",
+      "bytes": 1315599,
+      "sha256": "5d9868584adcb75e6eed68b9150b4bd852a99faff6344df6ae8529aaa0f59f86"
+    },
+    {
+      "frames": 22,
+      "duration": 110,
+      "phase": 0.5687061183550652,
+      "scan_cycles": 2,
+      "glow": [
+        227.344,
+        222.985,
+        304.96000000000004,
+        255.115
+      ],
+      "harmonics": [
+        3,
+        9
+      ],
+      "glow_cycles": 1,
+      "band_gain": 0.23,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 181703817,
+      "artwork_geometry": "fixed",
+      "id": "major-8",
+      "file": "major-8.gif",
+      "bytes": 783044,
+      "sha256": "59800b16fe195567670924c7a31b389cc2d91806bc2bafb35e5bab382ee9847d"
+    },
+    {
+      "frames": 23,
+      "duration": 100,
+      "phase": 0.4864593781344032,
+      "scan_cycles": 1,
+      "glow": [
+        355.36,
+        349.615,
+        416.848,
+        428.995
+      ],
+      "harmonics": [
+        2,
+        8
+      ],
+      "glow_cycles": 2,
+      "band_gain": 0.28,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 2942987956,
+      "artwork_geometry": "fixed",
+      "id": "major-9",
+      "file": "major-9.gif",
+      "bytes": 1068986,
+      "sha256": "110e66f19cef37ea73fd5f32360a1eb6dac2e8cae8af8830b9fbab97bafcb92d"
+    },
+    {
+      "frames": 22,
+      "duration": 100,
+      "phase": 0.5656970912738215,
+      "scan_cycles": 1,
+      "glow": [
+        129.56799999999998,
+        288.19,
+        470.272,
+        607.5999999999999
+      ],
+      "harmonics": [
+        4,
+        8
+      ],
+      "glow_cycles": 1,
+      "band_gain": 0.27,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 1171521426,
+      "artwork_geometry": "fixed",
+      "id": "major-10",
+      "file": "major-10.gif",
+      "bytes": 872360,
+      "sha256": "e30beff8cd75949a4fbe9293e0c5eee3012f6b5cef6ac1523bdb1517924f9a6e"
+    },
+    {
+      "frames": 23,
+      "duration": 120,
+      "phase": 0.6700100300902708,
+      "scan_cycles": 2,
+      "glow": [
+        396.688,
+        373.24,
+        418.864,
+        570.745
+      ],
+      "harmonics": [
+        3,
+        10
+      ],
+      "glow_cycles": 2,
+      "band_gain": 0.27,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 3880229953,
+      "artwork_geometry": "fixed",
+      "id": "major-11",
+      "file": "major-11.gif",
+      "bytes": 1182583,
+      "sha256": "791069ef867ab2dc5c263f3d7b3fdffd75c96a2d50c50f16be895a8696503b57"
+    },
+    {
+      "frames": 24,
+      "duration": 130,
+      "phase": 0.6880641925777332,
+      "scan_cycles": 2,
+      "glow": [
+        58.0,
+        154.0,
+        541.84,
+        361.9
+      ],
+      "harmonics": [
+        3,
+        11
+      ],
+      "glow_cycles": 3,
+      "band_gain": 0.23,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 476266589,
+      "artwork_geometry": "fixed",
+      "id": "major-12",
+      "file": "major-12.gif",
+      "bytes": 1293189,
+      "sha256": "403f7ecfe4db4c66697933b5c53e7901a5e4948c76b6688a0c842e522fa3c23c"
+    },
+    {
+      "frames": 22,
+      "duration": 100,
+      "phase": 0.691073219658977,
+      "scan_cycles": 1,
+      "glow": [
+        365.44,
+        361.9,
+        488.416,
+        462.07
+      ],
+      "harmonics": [
+        2,
+        8
+      ],
+      "glow_cycles": 1,
+      "band_gain": 0.23,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 3839997036,
+      "artwork_geometry": "fixed",
+      "id": "major-13",
+      "file": "major-13.gif",
+      "bytes": 917818,
+      "sha256": "b6965d441670b9e60d80ccc2f9526510576ace0595b04dfe1019263b8eaf23f2"
+    },
+    {
+      "frames": 22,
+      "duration": 110,
+      "phase": 0.09729187562688064,
+      "scan_cycles": 1,
+      "glow": [
+        204.16,
+        490.41999999999996,
+        392.656,
+        561.295
+      ],
+      "harmonics": [
+        2,
+        9
+      ],
+      "glow_cycles": 1,
+      "band_gain": 0.22,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 3271411332,
+      "artwork_geometry": "fixed",
+      "id": "major-14",
+      "file": "major-14.gif",
+      "bytes": 819433,
+      "sha256": "a61df50af36e3ae214aba879bf77d5ee75e1e651f857f989a0791e5d6bd3662e"
+    },
+    {
+      "frames": 23,
+      "duration": 90,
+      "phase": 0.11434302908726178,
+      "scan_cycles": 2,
+      "glow": [
+        161.824,
+        617.9949999999999,
+        446.08,
+        680.365
+      ],
+      "harmonics": [
+        5,
+        7
+      ],
+      "glow_cycles": 2,
+      "band_gain": 0.23,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 1201737055,
+      "artwork_geometry": "fixed",
+      "id": "major-15",
+      "file": "major-15.gif",
+      "bytes": 1225645,
+      "sha256": "15e6ea5e2e70b526fa56caaf54c0d0880bca1343d59dcda13047a3ecc8eb121c"
+    },
+    {
+      "frames": 23,
+      "duration": 90,
+      "phase": 0.82,
+      "scan_cycles": 2,
+      "glow": [
+        215,
+        162,
+        478,
+        505
+      ],
+      "harmonics": [
+        3,
+        7
+      ],
+      "glow_cycles": 2,
+      "band_gain": 0.27,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 222037345,
+      "artwork_geometry": "fixed",
+      "id": "major-16",
+      "file": "major-16.gif",
+      "bytes": 1233513,
+      "sha256": "11954a82b7f4cb6742f78f8efd679aea9af6e2de070d288f8573b7fbe6078b5d"
+    },
+    {
+      "frames": 22,
+      "duration": 110,
+      "phase": 0.0802407221664995,
+      "scan_cycles": 2,
+      "glow": [
+        196.096,
+        604.765,
+        491.44,
+        722.89
+      ],
+      "harmonics": [
+        5,
+        9
+      ],
+      "glow_cycles": 1,
+      "band_gain": 0.26,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 601580907,
+      "artwork_geometry": "fixed",
+      "id": "major-17",
+      "file": "major-17.gif",
+      "bytes": 790970,
+      "sha256": "a07bbbd2f36d7855fcbf4c62a892902bf334060386bdf2720390044f903e53a4"
+    },
+    {
+      "frames": 24,
+      "duration": 130,
+      "phase": 0.8635907723169508,
+      "scan_cycles": 2,
+      "glow": [
+        219.28,
+        190.855,
+        379.552,
+        339.22
+      ],
+      "harmonics": [
+        5,
+        11
+      ],
+      "glow_cycles": 3,
+      "band_gain": 0.22,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 1139825099,
+      "artwork_geometry": "fixed",
+      "id": "major-18",
+      "file": "major-18.gif",
+      "bytes": 1154013,
+      "sha256": "52849224fca29d2d8b025de836b0d304b4ebc87dc475a1d3651caf1f0251a892"
+    },
+    {
+      "frames": 24,
+      "duration": 90,
+      "phase": 0.9007021063189569,
+      "scan_cycles": 2,
+      "glow": [
+        403.744,
+        409.15,
+        504.544,
+        498.92499999999995
+      ],
+      "harmonics": [
+        5,
+        7
+      ],
+      "glow_cycles": 3,
+      "band_gain": 0.26,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 3654166415,
+      "artwork_geometry": "fixed",
+      "id": "major-19",
+      "file": "major-19.gif",
+      "bytes": 1206460,
+      "sha256": "8c09ca6f7496c2c7397018865d50973634cd2303c48f17170258846c5b66f1e9"
+    },
+    {
+      "frames": 24,
+      "duration": 90,
+      "phase": 0.4002006018054162,
+      "scan_cycles": 1,
+      "glow": [
+        180.976,
+        254.17000000000002,
+        415.84,
+        424.27
+      ],
+      "harmonics": [
+        2,
+        7
+      ],
+      "glow_cycles": 3,
+      "band_gain": 0.22,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 1229414060,
+      "artwork_geometry": "fixed",
+      "id": "major-20",
+      "file": "major-20.gif",
+      "bytes": 970287,
+      "sha256": "4021436a938f8298ec971dac92f3aa3dccf4dcc1c230ac5dd633330720e4ffaa"
+    },
+    {
+      "frames": 23,
+      "duration": 110,
+      "phase": 0.48746238716148443,
+      "scan_cycles": 1,
+      "glow": [
+        128.56,
+        217.315,
+        472.288,
+        689.8149999999999
+      ],
+      "harmonics": [
+        4,
+        9
+      ],
+      "glow_cycles": 2,
+      "band_gain": 0.26,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 3721131502,
+      "artwork_geometry": "fixed",
+      "id": "major-21",
+      "file": "major-21.gif",
+      "bytes": 890111,
+      "sha256": "3f5335a60937b302a5c876f384f6ca37fac9c07c76fa3b1be7abeb6d38c5090e"
+    },
+    {
+      "frames": 22,
+      "duration": 120,
+      "phase": 0.13239719157472418,
+      "scan_cycles": 1,
+      "glow": [
+        247.504,
+        219.20499999999998,
+        378.544,
+        503.65
+      ],
+      "harmonics": [
+        2,
+        10
+      ],
+      "glow_cycles": 1,
+      "band_gain": 0.26,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 4162084308,
+      "artwork_geometry": "fixed",
+      "id": "wands-ace",
+      "file": "wands-ace.gif",
+      "bytes": 949819,
+      "sha256": "8bbc0cd9af5c71da014dc515e4703e73c09e381a5bd2dd3fae0ffacfeff467ef"
+    },
+    {
+      "frames": 24,
+      "duration": 110,
+      "phase": 0.5336008024072216,
+      "scan_cycles": 2,
+      "glow": [
+        343.264,
+        490.41999999999996,
+        423.904,
+        673.75
+      ],
+      "harmonics": [
+        3,
+        9
+      ],
+      "glow_cycles": 3,
+      "band_gain": 0.23,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 3513792437,
+      "artwork_geometry": "fixed",
+      "id": "wands-two",
+      "file": "wands-two.gif",
+      "bytes": 1390929,
+      "sha256": "da5f0c6dd4bebdd2382838cea1f439d02ebd4fde8652f9f9a47f22dc0e53770a"
+    },
+    {
+      "frames": 22,
+      "duration": 110,
+      "phase": 0.6268806419257773,
+      "scan_cycles": 2,
+      "glow": [
+        281.776,
+        447.895,
+        355.36,
+        687.925
+      ],
+      "harmonics": [
+        3,
+        9
+      ],
+      "glow_cycles": 1,
+      "band_gain": 0.26,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 4248113937,
+      "artwork_geometry": "fixed",
+      "id": "wands-three",
+      "file": "wands-three.gif",
+      "bytes": 993432,
+      "sha256": "4973540f2ee7d5abe9e5c988ab1900a11a8475307ca86ee33f2f7f44bc6414d9"
+    },
+    {
+      "frames": 23,
+      "duration": 110,
+      "phase": 0.033099297893681046,
+      "scan_cycles": 2,
+      "glow": [
+        230.368,
+        503.65,
+        401.728,
+        714.385
+      ],
+      "harmonics": [
+        3,
+        9
+      ],
+      "glow_cycles": 2,
+      "band_gain": 0.25,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 899206297,
+      "artwork_geometry": "fixed",
+      "id": "wands-four",
+      "file": "wands-four.gif",
+      "bytes": 938677,
+      "sha256": "a78b4b32d4655be486f8eefd8f39f10faf9ebd59bfdbd77d7928c2472ce4d5f5"
+    },
+    {
+      "frames": 22,
+      "duration": 120,
+      "phase": 0.34804413239719156,
+      "scan_cycles": 1,
+      "glow": [
+        80.176,
+        317.485,
+        517.648,
+        695.485
+      ],
+      "harmonics": [
+        4,
+        10
+      ],
+      "glow_cycles": 1,
+      "band_gain": 0.24,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 1868820018,
+      "artwork_geometry": "fixed",
+      "id": "wands-five",
+      "file": "wands-five.gif",
+      "bytes": 1000552,
+      "sha256": "60565c97515c8ab4fdc697823984c36e82f9ffe829d842f292b082e6543ef0d3"
+    },
+    {
+      "frames": 22,
+      "duration": 110,
+      "phase": 0.6318956870611836,
+      "scan_cycles": 2,
+      "glow": [
+        173.92000000000002,
+        342.05499999999995,
+        337.216,
+        471.52
+      ],
+      "harmonics": [
+        5,
+        9
+      ],
+      "glow_cycles": 1,
+      "band_gain": 0.22,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 269690127,
+      "artwork_geometry": "fixed",
+      "id": "wands-six",
+      "file": "wands-six.gif",
+      "bytes": 946829,
+      "sha256": "16dd8fa2f3b419682d5147c08925423fe231519c6cd079104d7935a5ea7f459f"
+    },
+    {
+      "frames": 22,
+      "duration": 130,
+      "phase": 0.16950852557673018,
+      "scan_cycles": 2,
+      "glow": [
+        216.256,
+        324.1,
+        378.544,
+        515.935
+      ],
+      "harmonics": [
+        5,
+        11
+      ],
+      "glow_cycles": 1,
+      "band_gain": 0.25,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 2287865919,
+      "artwork_geometry": "fixed",
+      "id": "wands-seven",
+      "file": "wands-seven.gif",
+      "bytes": 1011277,
+      "sha256": "d72516a51d22211d59380472d51a18d1d8e7c88193a4afe9044b8ea5b0d0ef95"
+    },
+    {
+      "frames": 24,
+      "duration": 100,
+      "phase": 0.9558676028084253,
+      "scan_cycles": 2,
+      "glow": [
+        58.0,
+        607.5999999999999,
+        541.84,
+        697.375
+      ],
+      "harmonics": [
+        5,
+        8
+      ],
+      "glow_cycles": 3,
+      "band_gain": 0.25,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 2361509111,
+      "artwork_geometry": "fixed",
+      "id": "wands-eight",
+      "file": "wands-eight.gif",
+      "bytes": 1127007,
+      "sha256": "4acc8dda0b070e22e4c83a48bb729a52605e47727c85da1d8dc6e90dceda1ec4"
+    },
+    {
+      "frames": 24,
+      "duration": 110,
+      "phase": 0.39317953861584753,
+      "scan_cycles": 2,
+      "glow": [
+        58.0,
+        635.005,
+        541.84,
+        758.8
+      ],
+      "harmonics": [
+        5,
+        9
+      ],
+      "glow_cycles": 3,
+      "band_gain": 0.23,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 273512387,
+      "artwork_geometry": "fixed",
+      "id": "wands-nine",
+      "file": "wands-nine.gif",
+      "bytes": 1046206,
+      "sha256": "eeb0d43e9417a3bd18f00048643fb4a663b89759e88be2d1305f8cb872f5f557"
+    },
+    {
+      "frames": 22,
+      "duration": 100,
+      "phase": 0.3901705115346038,
+      "scan_cycles": 1,
+      "glow": [
+        209.2,
+        274.96,
+        395.68,
+        635.95
+      ],
+      "harmonics": [
+        4,
+        8
+      ],
+      "glow_cycles": 1,
+      "band_gain": 0.23,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 2474934246,
+      "artwork_geometry": "fixed",
+      "id": "wands-ten",
+      "file": "wands-ten.gif",
+      "bytes": 881222,
+      "sha256": "a7dc0413062a74b110cdc1919eeb71b8194f59522ddf35eea838167e8f48b11d"
+    },
+    {
+      "frames": 22,
+      "duration": 110,
+      "phase": 0.6700100300902708,
+      "scan_cycles": 2,
+      "glow": [
+        133.6,
+        227.70999999999998,
+        209.2,
+        312.76
+      ],
+      "harmonics": [
+        5,
+        9
+      ],
+      "glow_cycles": 1,
+      "band_gain": 0.23,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 585884727,
+      "artwork_geometry": "fixed",
+      "id": "wands-page",
+      "file": "wands-page.gif",
+      "bytes": 1156970,
+      "sha256": "26169a24bbeb9a8a91215ede80f7a6c701c0b829f81f64fe0e7430dcdf626502"
+    },
+    {
+      "frames": 24,
+      "duration": 90,
+      "phase": 0.36710130391173523,
+      "scan_cycles": 2,
+      "glow": [
+        360.4,
+        259.84,
+        448.096,
+        569.8
+      ],
+      "harmonics": [
+        3,
+        7
+      ],
+      "glow_cycles": 3,
+      "band_gain": 0.24,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 1776581585,
+      "artwork_geometry": "fixed",
+      "id": "wands-knight",
+      "file": "wands-knight.gif",
+      "bytes": 1231094,
+      "sha256": "f46ad816701f64d8f309a5a771899f7f99c0e862d675235b6e44c2bda5b24d10"
+    },
+    {
+      "frames": 22,
+      "duration": 110,
+      "phase": 0.2637913741223671,
+      "scan_cycles": 1,
+      "glow": [
+        58.0,
+        520.66,
+        541.84,
+        758.8
+      ],
+      "harmonics": [
+        2,
+        9
+      ],
+      "glow_cycles": 1,
+      "band_gain": 0.25,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 2455528512,
+      "artwork_geometry": "fixed",
+      "id": "wands-queen",
+      "file": "wands-queen.gif",
+      "bytes": 958475,
+      "sha256": "f4ef203aafe348c2cd9c69595cb73f75c45d8734bf1fd1c77ba7094843baf827"
+    },
+    {
+      "frames": 24,
+      "duration": 90,
+      "phase": 0.3731193580742227,
+      "scan_cycles": 1,
+      "glow": [
+        58.0,
+        366.625,
+        541.84,
+        532.0
+      ],
+      "harmonics": [
+        2,
+        7
+      ],
+      "glow_cycles": 3,
+      "band_gain": 0.24,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 2211769100,
+      "artwork_geometry": "fixed",
+      "id": "wands-king",
+      "file": "wands-king.gif",
+      "bytes": 1250158,
+      "sha256": "2ac70280e91260e779c4fa0192f9fdc24b3092376cd6f14d3e798d38c1188dcf"
+    },
+    {
+      "frames": 23,
+      "duration": 90,
+      "phase": 0.6308926780341023,
+      "scan_cycles": 1,
+      "glow": [
+        245.488,
+        462.07,
+        367.456,
+        653.905
+      ],
+      "harmonics": [
+        2,
+        7
+      ],
+      "glow_cycles": 2,
+      "band_gain": 0.23,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 265205620,
+      "artwork_geometry": "fixed",
+      "id": "cups-ace",
+      "file": "cups-ace.gif",
+      "bytes": 781957,
+      "sha256": "23780cf22d15e7025bcd896ee1f009795d64c3037c707dcbdb1ab31d6622d940"
+    },
+    {
+      "frames": 24,
+      "duration": 130,
+      "phase": 0.839518555667001,
+      "scan_cycles": 1,
+      "glow": [
+        256.576,
+        286.29999999999995,
+        340.24,
+        461.125
+      ],
+      "harmonics": [
+        4,
+        11
+      ],
+      "glow_cycles": 3,
+      "band_gain": 0.26,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 2241257834,
+      "artwork_geometry": "fixed",
+      "id": "cups-two",
+      "file": "cups-two.gif",
+      "bytes": 857512,
+      "sha256": "bd0201d1bea4afe2d81199cc7d19e73dee34ad54319e304bae1a24bfeca56eb8"
+    },
+    {
+      "frames": 24,
+      "duration": 100,
+      "phase": 0.20561685055165496,
+      "scan_cycles": 1,
+      "glow": [
+        106.384,
+        472.465,
+        497.488,
+        717.22
+      ],
+      "harmonics": [
+        4,
+        8
+      ],
+      "glow_cycles": 3,
+      "band_gain": 0.22,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 4234491506,
+      "artwork_geometry": "fixed",
+      "id": "cups-three",
+      "file": "cups-three.gif",
+      "bytes": 956805,
+      "sha256": "749ff982ef3cd79034e77a9e9b9cf852e23be4d199fe4524deadcfe7da40f4ee"
+    },
+    {
+      "frames": 24,
+      "duration": 130,
+      "phase": 0.7883650952858575,
+      "scan_cycles": 1,
+      "glow": [
+        373.504,
+        401.59,
+        506.56,
+        539.56
+      ],
+      "harmonics": [
+        4,
+        11
+      ],
+      "glow_cycles": 3,
+      "band_gain": 0.26,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 669310814,
+      "artwork_geometry": "fixed",
+      "id": "cups-four",
+      "file": "cups-four.gif",
+      "bytes": 946847,
+      "sha256": "bb6fe2939b58bd87387728e5fd3aaed8ce6c9cd696d694eb68edb34a7de5072a"
+    },
+    {
+      "frames": 23,
+      "duration": 110,
+      "phase": 0.728184553660983,
+      "scan_cycles": 2,
+      "glow": [
+        58.0,
+        580.1949999999999,
+        541.84,
+        641.6199999999999
+      ],
+      "harmonics": [
+        5,
+        9
+      ],
+      "glow_cycles": 2,
+      "band_gain": 0.23,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 913943647,
+      "artwork_geometry": "fixed",
+      "id": "cups-five",
+      "file": "cups-five.gif",
+      "bytes": 1301950,
+      "sha256": "8e34bb46f36528871560b9b94e2e2a6fef2a61e90e77e4e238582b2ff28347c0"
+    },
+    {
+      "frames": 24,
+      "duration": 110,
+      "phase": 0.6258776328986961,
+      "scan_cycles": 2,
+      "glow": [
+        249.52,
+        540.505,
+        330.16,
+        587.755
+      ],
+      "harmonics": [
+        3,
+        9
+      ],
+      "glow_cycles": 3,
+      "band_gain": 0.22,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 3307357697,
+      "artwork_geometry": "fixed",
+      "id": "cups-six",
+      "file": "cups-six.gif",
+      "bytes": 1309278,
+      "sha256": "56084e8c0cd19cc394ef95f71afd3d2bd6b5050d2c1affcba7bc4a07b2902cc4"
+    },
+    {
+      "frames": 24,
+      "duration": 130,
+      "phase": 0.3029087261785356,
+      "scan_cycles": 1,
+      "glow": [
+        78.16,
+        311.815,
+        522.688,
+        598.15
+      ],
+      "harmonics": [
+        2,
+        11
+      ],
+      "glow_cycles": 3,
+      "band_gain": 0.26,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 1164761504,
+      "artwork_geometry": "fixed",
+      "id": "cups-seven",
+      "file": "cups-seven.gif",
+      "bytes": 1025567,
+      "sha256": "5b5f1cb7629a38e69cd17828d13564dc1961c2a5e43da97cdefbf6f91eb99e08"
+    },
+    {
+      "frames": 22,
+      "duration": 110,
+      "phase": 0.8595787362086259,
+      "scan_cycles": 2,
+      "glow": [
+        58.0,
+        590.5899999999999,
+        304.96000000000004,
+        755.9649999999999
+      ],
+      "harmonics": [
+        3,
+        9
+      ],
+      "glow_cycles": 1,
+      "band_gain": 0.28,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 292680177,
+      "artwork_geometry": "fixed",
+      "id": "cups-eight",
+      "file": "cups-eight.gif",
+      "bytes": 940846,
+      "sha256": "3f9c17facd1b9afd1e07c3e96f8f8626bddb1917f61ea4ce5bd6b379261de14c"
+    },
+    {
+      "frames": 23,
+      "duration": 90,
+      "phase": 0.34002006018054165,
+      "scan_cycles": 2,
+      "glow": [
+        200.12800000000001,
+        474.35499999999996,
+        383.584,
+        713.4399999999999
+      ],
+      "harmonics": [
+        5,
+        7
+      ],
+      "glow_cycles": 2,
+      "band_gain": 0.26,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 65949895,
+      "artwork_geometry": "fixed",
+      "id": "cups-nine",
+      "file": "cups-nine.gif",
+      "bytes": 843219,
+      "sha256": "cf467295462df812f9c2fb370dfe2dbd1e6e698af94e40c1b668b5cff47fd3ae"
+    },
+    {
+      "frames": 23,
+      "duration": 110,
+      "phase": 0.4794383149448345,
+      "scan_cycles": 2,
+      "glow": [
+        58.0,
+        578.305,
+        541.84,
+        758.8
+      ],
+      "harmonics": [
+        3,
+        9
+      ],
+      "glow_cycles": 2,
+      "band_gain": 0.27,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 860358637,
+      "artwork_geometry": "fixed",
+      "id": "cups-ten",
+      "file": "cups-ten.gif",
+      "bytes": 855573,
+      "sha256": "bcb3281cf2de41a9d85a426d50f2013da9627a597007481ca73741ff3b010527"
+    },
+    {
+      "frames": 24,
+      "duration": 130,
+      "phase": 0.3299899699097292,
+      "scan_cycles": 1,
+      "glow": [
+        334.192,
+        447.895,
+        412.81600000000003,
+        526.3299999999999
+      ],
+      "harmonics": [
+        4,
+        11
+      ],
+      "glow_cycles": 3,
+      "band_gain": 0.22,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 4222679174,
+      "artwork_geometry": "fixed",
+      "id": "cups-page",
+      "file": "cups-page.gif",
+      "bytes": 1372579,
+      "sha256": "ebe62ee2cc62bbef0972963f370655efd57245cef7026af228e8a928ba051f46"
+    },
+    {
+      "frames": 24,
+      "duration": 110,
+      "phase": 0.10531594784353059,
+      "scan_cycles": 1,
+      "glow": [
+        81.184,
+        459.23499999999996,
+        148.72,
+        623.665
+      ],
+      "harmonics": [
+        2,
+        9
+      ],
+      "glow_cycles": 3,
+      "band_gain": 0.28,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 2546967212,
+      "artwork_geometry": "fixed",
+      "id": "cups-knight",
+      "file": "cups-knight.gif",
+      "bytes": 982470,
+      "sha256": "cf9e9c1b4f2b7b3bdabe5d8d6ac4553212930b0ab1fef29d5296afe95d4b3a60"
+    },
+    {
+      "frames": 24,
+      "duration": 100,
+      "phase": 0.28084252758274825,
+      "scan_cycles": 2,
+      "glow": [
+        343.264,
+        425.215,
+        434.992,
+        535.78
+      ],
+      "harmonics": [
+        3,
+        8
+      ],
+      "glow_cycles": 3,
+      "band_gain": 0.25,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 4245857381,
+      "artwork_geometry": "fixed",
+      "id": "cups-queen",
+      "file": "cups-queen.gif",
+      "bytes": 992463,
+      "sha256": "6452d6a9a78012c3f9f09aabe671fb012b70690f19682e90b3ca89c294d645f4"
+    },
+    {
+      "frames": 24,
+      "duration": 90,
+      "phase": 0.7522567703109327,
+      "scan_cycles": 2,
+      "glow": [
+        58.0,
+        600.9849999999999,
+        541.84,
+        758.8
+      ],
+      "harmonics": [
+        3,
+        7
+      ],
+      "glow_cycles": 3,
+      "band_gain": 0.23,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 2842024025,
+      "artwork_geometry": "fixed",
+      "id": "cups-king",
+      "file": "cups-king.gif",
+      "bytes": 1011211,
+      "sha256": "10c177cf590851b8edb83fc9cb79f4e4da9d25810658e03cc74cdbcc3b205a57"
+    },
+    {
+      "frames": 22,
+      "duration": 130,
+      "phase": 0.921765295887663,
+      "scan_cycles": 1,
+      "glow": [
+        296.896,
+        228.655,
+        328.144,
+        491.365
+      ],
+      "harmonics": [
+        2,
+        11
+      ],
+      "glow_cycles": 1,
+      "band_gain": 0.27,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 1342426524,
+      "artwork_geometry": "fixed",
+      "id": "swords-ace",
+      "file": "swords-ace.gif",
+      "bytes": 1169233,
+      "sha256": "149d859e60405b03a6817d019a52b4d62e452ec9af1979d1f28150d55b1d2e08"
+    },
+    {
+      "frames": 23,
+      "duration": 110,
+      "phase": 0.22367101303911735,
+      "scan_cycles": 1,
+      "glow": [
+        103.36,
+        259.84,
+        490.432,
+        541.45
+      ],
+      "harmonics": [
+        2,
+        9
+      ],
+      "glow_cycles": 2,
+      "band_gain": 0.22,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 3498689572,
+      "artwork_geometry": "fixed",
+      "id": "swords-two",
+      "file": "swords-two.gif",
+      "bytes": 1243145,
+      "sha256": "f9154637f8cdd1b080d554b0a74ac1fabbcbd620a295cb1e360f10cd3bd3620b"
+    },
+    {
+      "frames": 24,
+      "duration": 100,
+      "phase": 0.14744232698094284,
+      "scan_cycles": 2,
+      "glow": [
+        128.56,
+        321.265,
+        477.328,
+        614.2149999999999
+      ],
+      "harmonics": [
+        3,
+        8
+      ],
+      "glow_cycles": 3,
+      "band_gain": 0.28,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 340019021,
+      "artwork_geometry": "fixed",
+      "id": "swords-three",
+      "file": "swords-three.gif",
+      "bytes": 1249332,
+      "sha256": "bf0465151632f4b30625ee30972949aea7ba20115e80df4f9a21e961f1eaa322"
+    },
+    {
+      "frames": 22,
+      "duration": 90,
+      "phase": 0.477432296890672,
+      "scan_cycles": 1,
+      "glow": [
+        129.56799999999998,
+        546.175,
+        471.28000000000003,
+        686.98
+      ],
+      "harmonics": [
+        2,
+        7
+      ],
+      "glow_cycles": 1,
+      "band_gain": 0.25,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 1001857860,
+      "artwork_geometry": "fixed",
+      "id": "swords-four",
+      "file": "swords-four.gif",
+      "bytes": 1211669,
+      "sha256": "233117de3e7090864c97020613db4f9c0ecf912b4a5c8d7d5b1841b82e03945f"
+    },
+    {
+      "frames": 24,
+      "duration": 130,
+      "phase": 0.8104312938816449,
+      "scan_cycles": 2,
+      "glow": [
+        58.0,
+        589.645,
+        541.84,
+        743.68
+      ],
+      "harmonics": [
+        3,
+        11
+      ],
+      "glow_cycles": 3,
+      "band_gain": 0.25,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 839707109,
+      "artwork_geometry": "fixed",
+      "id": "swords-five",
+      "file": "swords-five.gif",
+      "bytes": 1343473,
+      "sha256": "17d97ce65adc2428dea4538ee699d61483873b645df4dcbc90cafc4a623100bb"
+    },
+    {
+      "frames": 23,
+      "duration": 90,
+      "phase": 0.831494483450351,
+      "scan_cycles": 2,
+      "glow": [
+        160.816,
+        551.845,
+        440.032,
+        721.9449999999999
+      ],
+      "harmonics": [
+        3,
+        7
+      ],
+      "glow_cycles": 2,
+      "band_gain": 0.24,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 1570682605,
+      "artwork_geometry": "fixed",
+      "id": "swords-six",
+      "file": "swords-six.gif",
+      "bytes": 1301656,
+      "sha256": "9494daf72e5572426378681fdf2fc0e145216531d6d85ea7c235f91cc83da4e6"
+    },
+    {
+      "frames": 22,
+      "duration": 100,
+      "phase": 0.9037111334002006,
+      "scan_cycles": 2,
+      "glow": [
+        246.496,
+        458.28999999999996,
+        368.464,
+        699.265
+      ],
+      "harmonics": [
+        3,
+        8
+      ],
+      "glow_cycles": 1,
+      "band_gain": 0.27,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 2351365581,
+      "artwork_geometry": "fixed",
+      "id": "swords-seven",
+      "file": "swords-seven.gif",
+      "bytes": 1192699,
+      "sha256": "2a444612e81340e4b81d6693084131c7ab4307e8ec6ea8bed059653f750defdc"
+    },
+    {
+      "frames": 22,
+      "duration": 130,
+      "phase": 0.11434302908726178,
+      "scan_cycles": 1,
+      "glow": [
+        58.0,
+        647.29,
+        541.84,
+        758.8
+      ],
+      "harmonics": [
+        4,
+        11
+      ],
+      "glow_cycles": 1,
+      "band_gain": 0.25,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 445718934,
+      "artwork_geometry": "fixed",
+      "id": "swords-eight",
+      "file": "swords-eight.gif",
+      "bytes": 1254838,
+      "sha256": "8c13962381631331ea5b797dc08df300755917bc3c86bb90c41874045b732c98"
+    },
+    {
+      "frames": 23,
+      "duration": 110,
+      "phase": 0.8455366098294884,
+      "scan_cycles": 1,
+      "glow": [
+        169.888,
+        452.62,
+        475.312,
+        664.3
+      ],
+      "harmonics": [
+        4,
+        9
+      ],
+      "glow_cycles": 2,
+      "band_gain": 0.28,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 2754180442,
+      "artwork_geometry": "fixed",
+      "id": "swords-nine",
+      "file": "swords-nine.gif",
+      "bytes": 1126457,
+      "sha256": "1e77edc5c29ab56188830dbc76583fac4e314c1b8d5de5a3c65c24c0338ea249"
+    },
+    {
+      "frames": 22,
+      "duration": 90,
+      "phase": 0.5777331995987964,
+      "scan_cycles": 2,
+      "glow": [
+        58.0,
+        452.62,
+        541.84,
+        547.12
+      ],
+      "harmonics": [
+        3,
+        7
+      ],
+      "glow_cycles": 1,
+      "band_gain": 0.27,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 358498845,
+      "artwork_geometry": "fixed",
+      "id": "swords-ten",
+      "file": "swords-ten.gif",
+      "bytes": 1014972,
+      "sha256": "61697e71eb37fe7572c5770efa33ac8c83cf30b3ba89eeab8ad85506d0b89377"
+    },
+    {
+      "frames": 23,
+      "duration": 90,
+      "phase": 0.7392176529588766,
+      "scan_cycles": 2,
+      "glow": [
+        195.088,
+        404.42499999999995,
+        374.512,
+        617.9949999999999
+      ],
+      "harmonics": [
+        3,
+        7
+      ],
+      "glow_cycles": 2,
+      "band_gain": 0.27,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 700476985,
+      "artwork_geometry": "fixed",
+      "id": "swords-page",
+      "file": "swords-page.gif",
+      "bytes": 1072258,
+      "sha256": "322ceb8bad2a1874e04f51017547c4cd5612ce95c74fa1129d6d44159af9d026"
+    },
+    {
+      "frames": 22,
+      "duration": 100,
+      "phase": 0.9297893681043129,
+      "scan_cycles": 1,
+      "glow": [
+        58.0,
+        154.0,
+        541.84,
+        601.93
+      ],
+      "harmonics": [
+        2,
+        8
+      ],
+      "glow_cycles": 1,
+      "band_gain": 0.27,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 2421451716,
+      "artwork_geometry": "fixed",
+      "id": "swords-knight",
+      "file": "swords-knight.gif",
+      "bytes": 1129011,
+      "sha256": "07699dfc4b4c78a04098721acc8f9fd096971b84cd29acb927b97b4f39ed5ed2"
+    },
+    {
+      "frames": 22,
+      "duration": 90,
+      "phase": 0.3901705115346038,
+      "scan_cycles": 2,
+      "glow": [
+        389.632,
+        309.92499999999995,
+        420.88,
+        600.04
+      ],
+      "harmonics": [
+        3,
+        7
+      ],
+      "glow_cycles": 1,
+      "band_gain": 0.24,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 869392365,
+      "artwork_geometry": "fixed",
+      "id": "swords-queen",
+      "file": "swords-queen.gif",
+      "bytes": 1242912,
+      "sha256": "9cd649d64eecbc2d68afa5a0fd647440a9c19923b6dff491c44c665ac673dd0e"
+    },
+    {
+      "frames": 23,
+      "duration": 90,
+      "phase": 0.1624874623871615,
+      "scan_cycles": 2,
+      "glow": [
+        121.50399999999999,
+        671.86,
+        207.184,
+        742.735
+      ],
+      "harmonics": [
+        3,
+        7
+      ],
+      "glow_cycles": 2,
+      "band_gain": 0.26,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 3377097385,
+      "artwork_geometry": "fixed",
+      "id": "swords-king",
+      "file": "swords-king.gif",
+      "bytes": 1183075,
+      "sha256": "f77c18e027a1dc24b66e94f813f6ed9c88e21dc7a25de89610554c71cccb3cfe"
+    },
+    {
+      "frames": 23,
+      "duration": 120,
+      "phase": 0.522567703109328,
+      "scan_cycles": 2,
+      "glow": [
+        58.0,
+        614.2149999999999,
+        541.84,
+        758.8
+      ],
+      "harmonics": [
+        3,
+        10
+      ],
+      "glow_cycles": 2,
+      "band_gain": 0.25,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 2812732933,
+      "artwork_geometry": "fixed",
+      "id": "pentacles-ace",
+      "file": "pentacles-ace.gif",
+      "bytes": 1301121,
+      "sha256": "ebdc6ce1905c6daadf805dc0a65f7791f5c75f4b01ec19f9b5f38a3da217b72b"
+    },
+    {
+      "frames": 23,
+      "duration": 130,
+      "phase": 0.9558676028084253,
+      "scan_cycles": 1,
+      "glow": [
+        136.624,
+        429.94,
+        456.16,
+        618.94
+      ],
+      "harmonics": [
+        2,
+        11
+      ],
+      "glow_cycles": 2,
+      "band_gain": 0.28,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 780375784,
+      "artwork_geometry": "fixed",
+      "id": "pentacles-two",
+      "file": "pentacles-two.gif",
+      "bytes": 855817,
+      "sha256": "1501d646b5901e07a2e968f53ed4d78e67d7fdb70778f9c2e4dcb69795598520"
+    },
+    {
+      "frames": 22,
+      "duration": 130,
+      "phase": 0.4684052156469408,
+      "scan_cycles": 2,
+      "glow": [
+        190.048,
+        214.48,
+        409.79200000000003,
+        344.89
+      ],
+      "harmonics": [
+        3,
+        11
+      ],
+      "glow_cycles": 1,
+      "band_gain": 0.26,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 2856032589,
+      "artwork_geometry": "fixed",
+      "id": "pentacles-three",
+      "file": "pentacles-three.gif",
+      "bytes": 1267361,
+      "sha256": "0c8b3300ca000aecf363fae3adae789c936941730832c3fc0a053e3bb38c0834"
+    },
+    {
+      "frames": 22,
+      "duration": 100,
+      "phase": 0.26479438314944836,
+      "scan_cycles": 1,
+      "glow": [
+        232.38400000000001,
+        480.025,
+        368.464,
+        585.865
+      ],
+      "harmonics": [
+        4,
+        8
+      ],
+      "glow_cycles": 1,
+      "band_gain": 0.28,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 1008212526,
+      "artwork_geometry": "fixed",
+      "id": "pentacles-four",
+      "file": "pentacles-four.gif",
+      "bytes": 1311341,
+      "sha256": "84d8d151b486efee41fa26ce6b91af3b9d1cf41144ce90ae25205e9dc77bc820"
+    },
+    {
+      "frames": 22,
+      "duration": 90,
+      "phase": 0.2948846539618857,
+      "scan_cycles": 1,
+      "glow": [
+        58.0,
+        154.0,
+        541.84,
+        758.8
+      ],
+      "harmonics": [
+        2,
+        7
+      ],
+      "glow_cycles": 1,
+      "band_gain": 0.26,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 3436437960,
+      "artwork_geometry": "fixed",
+      "id": "pentacles-five",
+      "file": "pentacles-five.gif",
+      "bytes": 1212154,
+      "sha256": "577f7de45bf7dc08f6ca99f500031e4ec4d55c0433dd81da198ea9934d79616b"
+    },
+    {
+      "frames": 23,
+      "duration": 100,
+      "phase": 0.3741223671013039,
+      "scan_cycles": 1,
+      "glow": [
+        193.072,
+        536.7249999999999,
+        273.712,
+        579.25
+      ],
+      "harmonics": [
+        4,
+        8
+      ],
+      "glow_cycles": 2,
+      "band_gain": 0.25,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 2317256686,
+      "artwork_geometry": "fixed",
+      "id": "pentacles-six",
+      "file": "pentacles-six.gif",
+      "bytes": 1346108,
+      "sha256": "dc6804038ce678ba37f378ff6b8c62a4d5d872eb3a5471e155fbff83880576f2"
+    },
+    {
+      "frames": 22,
+      "duration": 90,
+      "phase": 0.728184553660983,
+      "scan_cycles": 1,
+      "glow": [
+        58.0,
+        329.77,
+        279.76,
+        710.605
+      ],
+      "harmonics": [
+        4,
+        7
+      ],
+      "glow_cycles": 1,
+      "band_gain": 0.24,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 110679690,
+      "artwork_geometry": "fixed",
+      "id": "pentacles-seven",
+      "file": "pentacles-seven.gif",
+      "bytes": 926594,
+      "sha256": "c63ff3188a05117e10d4532b4fd90e075999bb5f8d0a649dee651aabac37ab59"
+    },
+    {
+      "frames": 22,
+      "duration": 90,
+      "phase": 0.4764292878635908,
+      "scan_cycles": 1,
+      "glow": [
+        312.01599999999996,
+        471.52,
+        380.56,
+        569.8
+      ],
+      "harmonics": [
+        2,
+        7
+      ],
+      "glow_cycles": 1,
+      "band_gain": 0.24,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 2319346500,
+      "artwork_geometry": "fixed",
+      "id": "pentacles-eight",
+      "file": "pentacles-eight.gif",
+      "bytes": 1265390,
+      "sha256": "ba608387b7ce0b7c71c9b74465c659cdaba5f5a5cffe0a1eacef607f75f30280"
+    },
+    {
+      "frames": 23,
+      "duration": 90,
+      "phase": 0.8876629889669007,
+      "scan_cycles": 1,
+      "glow": [
+        348.304,
+        443.16999999999996,
+        420.88,
+        503.65
+      ],
+      "harmonics": [
+        4,
+        7
+      ],
+      "glow_cycles": 2,
+      "band_gain": 0.26,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 3479874850,
+      "artwork_geometry": "fixed",
+      "id": "pentacles-nine",
+      "file": "pentacles-nine.gif",
+      "bytes": 968403,
+      "sha256": "84a209635a8a4d69e057c431dd74755ae088ad9505538f9ccc3d4b2cc22948a9"
+    },
+    {
+      "frames": 24,
+      "duration": 100,
+      "phase": 0.7462387161484454,
+      "scan_cycles": 2,
+      "glow": [
+        82.19200000000001,
+        200.305,
+        518.656,
+        761.635
+      ],
+      "harmonics": [
+        5,
+        8
+      ],
+      "glow_cycles": 3,
+      "band_gain": 0.26,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 2896316651,
+      "artwork_geometry": "fixed",
+      "id": "pentacles-ten",
+      "file": "pentacles-ten.gif",
+      "bytes": 1397872,
+      "sha256": "11c620be848f69c494ceb65f68e42ca6073305ffa412f733a1e009177ce2aa28"
+    },
+    {
+      "frames": 22,
+      "duration": 100,
+      "phase": 0.46038114343029085,
+      "scan_cycles": 1,
+      "glow": [
+        291.856,
+        455.455,
+        390.64,
+        545.23
+      ],
+      "harmonics": [
+        4,
+        8
+      ],
+      "glow_cycles": 1,
+      "band_gain": 0.26,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 2474565426,
+      "artwork_geometry": "fixed",
+      "id": "pentacles-page",
+      "file": "pentacles-page.gif",
+      "bytes": 958889,
+      "sha256": "15d849920c63a28ab8f2a4794c004da1b610552b2d65c3c89024730841e841e3"
+    },
+    {
+      "frames": 23,
+      "duration": 120,
+      "phase": 0.6018054162487463,
+      "scan_cycles": 1,
+      "glow": [
+        355.36,
+        347.725,
+        541.84,
+        590.5899999999999
+      ],
+      "harmonics": [
+        4,
+        10
+      ],
+      "glow_cycles": 2,
+      "band_gain": 0.28,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 2565534838,
+      "artwork_geometry": "fixed",
+      "id": "pentacles-knight",
+      "file": "pentacles-knight.gif",
+      "bytes": 1037170,
+      "sha256": "8784b877d3ca02d6f0186e44b418aeb1ae8cfa75eb091fa703f9df035f76b680"
+    },
+    {
+      "frames": 22,
+      "duration": 100,
+      "phase": 0.9809428284854563,
+      "scan_cycles": 1,
+      "glow": [
+        415.84,
+        651.0699999999999,
+        485.392,
+        723.8349999999999
+      ],
+      "harmonics": [
+        4,
+        8
+      ],
+      "glow_cycles": 1,
+      "band_gain": 0.22,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 873935286,
+      "artwork_geometry": "fixed",
+      "id": "pentacles-queen",
+      "file": "pentacles-queen.gif",
+      "bytes": 1063170,
+      "sha256": "85abc52123239bb2bf39df696fee76e36c10562f83103fbee5530fd0c8f48c8c"
+    },
+    {
+      "frames": 22,
+      "duration": 110,
+      "phase": 0.7311935807422267,
+      "scan_cycles": 2,
+      "glow": [
+        403.744,
+        612.325,
+        469.264,
+        745.5699999999999
+      ],
+      "harmonics": [
+        5,
+        9
+      ],
+      "glow_cycles": 1,
+      "band_gain": 0.24,
+      "size": [
+        320,
+        480
+      ],
+      "palette": 48,
+      "effects": [
+        "rolling refresh",
+        "scanlines",
+        "gentle irregular luminance",
+        "localized phosphor bloom",
+        "persistence trail"
+      ],
+      "seed": 4267433907,
+      "artwork_geometry": "fixed",
+      "id": "pentacles-king",
+      "file": "pentacles-king.gif",
+      "bytes": 1068671,
+      "sha256": "933313335d4c3ed950cdcd548772df67d54d185e5acfc6f433cdd9c23672efb3"
+    }
+  ]
+}
