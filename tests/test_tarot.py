@@ -44,16 +44,16 @@ class TarotTests(unittest.TestCase):
         self.store = Store(self.store.path, self.registry)
         with self.assertRaisesRegex(ValueError, "Explicitly shuffle"):
             self.draw("exhausted")
-        self.assertIn("0 draw / 78 discard", self.draw("status", "status")["text"])
-        self.draw("shuffle", "shuffle")
-        self.assertIn("cycle 2", self.draw("status2", "status")["text"])
+        self.assertIn("0 draw / 78 discard", self.draw("status", "status dawn")["text"])
+        self.draw("shuffle", "shuffle dawn")
+        self.assertIn("cycle 2", self.draw("status2", "status dawn")["text"])
 
     def test_partial_spread_is_atomic(self):
         for i in range(77):
             self.draw(str(i))
         with self.assertRaises(ValueError):
             self.draw("three", "draw dawn three")
-        self.assertIn("1 draw / 77 discard", self.draw("status", "status")["text"])
+        self.assertIn("1 draw / 77 discard", self.draw("status", "status dawn")["text"])
 
     def test_deck_and_workspace_isolation(self):
         self.draw("one")
@@ -92,7 +92,7 @@ class TarotTests(unittest.TestCase):
     def test_schedule_exhaustion_one_notice(self):
         for i in range(78):
             self.draw(str(i))
-        self.draw("schedule", "schedule 08:00 UTC")
+        self.draw("schedule", "schedule 08:00 UTC dawn")
         for _ in range(3):
             self.store.tick(datetime(2026, 10, 9, 12, tzinfo=timezone.utc))
         with self.store.connect() as db:
@@ -104,10 +104,10 @@ class TarotTests(unittest.TestCase):
         first = self.store.command("failed", "T1", "C1", "U1", "draw dawn")
         self.draw("shuffle", "shuffle dawn")
         self.assertEqual(first, self.store.command("failed", "T1", "C1", "U1", "draw dawn"))
-        self.assertIn("78 draw", self.draw("status", "status")["text"])
+        self.assertIn("78 draw", self.draw("status", "status dawn")["text"])
 
     def test_concurrent_scheduler_and_art_urls(self):
-        self.draw("schedule", "schedule 08:00 UTC")
+        self.draw("schedule", "schedule 08:00 UTC dawn")
         with ThreadPoolExecutor(max_workers=8) as pool:
             list(pool.map(self.store.tick, [datetime(2026, 10, 9, 12, tzinfo=timezone.utc)] * 16))
         with self.store.connect() as db:
@@ -180,7 +180,7 @@ class TarotTests(unittest.TestCase):
             self.assertEqual(after_shuffle, db.execute("SELECT draw,discard,cycle FROM shoes").fetchone())
 
     def test_restart_preserves_pending_readings_and_schedule_occurrence(self):
-        self.draw("schedule", "schedule 08:00 UTC")
+        self.draw("schedule", "schedule 08:00 UTC dawn")
         now = datetime(2026, 10, 9, 12, tzinfo=timezone.utc)
         self.store.tick(now)
         with self.store.connect() as db:
@@ -195,13 +195,13 @@ class TarotTests(unittest.TestCase):
         self.assertIn("76 draw / 2 discard", self.draw("status", "status dawn")["text"])
 
     def test_same_day_retry_after_clock_rollback(self):
-        self.draw("schedule", "schedule 08:00 UTC")
+        self.draw("schedule", "schedule 08:00 UTC dawn")
         for hour in (12, 7, 8, 23):
             self.store.tick(datetime(2026, 10, 9, hour, tzinfo=timezone.utc))
         self.assertIn("77 draw / 1 discard", self.draw("status", "status dawn")["text"])
 
     def test_schedule_and_user_draws_share_one_finite_shoe(self):
-        self.draw("schedule", "schedule 08:00 UTC")
+        self.draw("schedule", "schedule 08:00 UTC dawn")
         now = datetime(2026, 10, 9, 12, tzinfo=timezone.utc)
         with ThreadPoolExecutor(max_workers=12) as pool:
             futures = [pool.submit(self.draw, f"user-{i}") for i in range(40)]

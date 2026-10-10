@@ -208,19 +208,21 @@ $('login-form').addEventListener('submit', async e => {
 $('animate').addEventListener('change', () => { if (displayedCards) reveal(displayedCards, displayedPositions, false); });
 motionPreference.addEventListener('change', e => { $('animate').checked = !e.matches; if (displayedCards) reveal(displayedCards, displayedPositions, false); });
 async function init() {
+  lock(true);
   $('animate').checked = !motionPreference.matches;
   registry = await (await fetch('/web/demo.json')).json();
   $('deck').replaceChildren();
-  for (const [id, spec] of Object.entries(registry.decks)) {
+  for (const [id, spec] of Object.entries(registry.decks).filter(([, spec]) => spec.selectable !== false)) {
     shoes[id] = {draw: shuffleArray(spec.cards), discard: [], cycle: 1};
     const option = node('option', spec.name); option.value = id; $('deck').append(option);
   }
+  $('deck').value = registry.default_deck || $('deck').value;
   if (embedded) {
     $('mode').textContent = 'Read-only embedded preview · no channel data or mutations';
     $('connect').hidden = true;
     lock(false);
     $('whisper').textContent = 'A glimpse of the parlor. Open /tarot in Slack to begin your own ritual.';
   } else { await refreshLive(); }
-  backs();
+  backs(); lock(false);
 }
 init().catch(() => { lock(true); status('The illustrated table could not load. Your Slack deck is untouched.'); });

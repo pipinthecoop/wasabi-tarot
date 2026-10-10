@@ -38,8 +38,8 @@ def main():
     begin = js.index("$('login-form').addEventListener('submit'")
     end = js.index("$('animate').addEventListener", begin)
     js = js[:begin] + "$('login-form').addEventListener('submit', e => e.preventDefault());\n" + js[end:]
-    html = html.replace('<link rel="stylesheet" href="/web/table.css">', "<style>" + css + "</style>")
-    html = html.replace('<script src="/web/table.js" defer></script>', "")
+    html = html.replace('<link rel="stylesheet" href="/web/table.css?v=cards-2">', "<style>" + css + "</style>")
+    html = html.replace('<script src="/web/table.js?v=cards-2" defer></script>', "")
     html = html.replace("</body>", "<script>" + js + "</script></body>")
     html = html.replace("Connect Slack table", "About live setup")
     html = html.replace('id="login-code" type="password"', 'id="login-code" disabled type="password"')

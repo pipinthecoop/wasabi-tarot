@@ -14,6 +14,9 @@ from urllib.parse import urlsplit
 from zoneinfo import ZoneInfo
 
 
+from tarot.decks import available_decks, default_deck
+
+
 class Store:
     def __init__(self, path: str, registry: dict, theme: dict | None = None):
         self.path, self.registry = path, registry
@@ -66,7 +69,7 @@ class Store:
                 "text": 'draw [deck] [spread or "Position|Position"]; decks; spreads; status [deck]; shuffle [deck]; schedule HH:MM IANA-zone [deck] [spread]; schedules; unschedule ID'
             }
         if action in ("decks", "spreads"):
-            return {"text": ", ".join(self.registry[action])}
+            return {"text": ", ".join(available_decks(self.registry) if action == "decks" else self.registry[action])}
         if action == "schedules":
             rows = db.execute("SELECT id,spec FROM schedules WHERE enabled=1").fetchall()
             return {"text": "\n".join(f"{i}: {s}" for i, s in rows if json.loads(s)["team"] == team and json.loads(s)["channel"] == channel) or "No schedules."}
@@ -84,7 +87,7 @@ class Store:
             if not re.fullmatch(r"(?:[01][0-9]|2[0-3]):[0-5][0-9]", args[0]):
                 raise ValueError("Time must be HH:MM in 24-hour format")
             ZoneInfo(args[1])
-            deck = args[2] if len(args) > 2 else "dawn"
+            deck = args[2] if len(args) > 2 else default_deck(self.registry)
             spread = args[3] if len(args) > 3 else "single"
             self.selection(deck, spread)
             sid = str(uuid.uuid4())
@@ -93,7 +96,7 @@ class Store:
             return {"text": f"Daily schedule created: {sid}"}
         if action not in ("draw", "shuffle", "status"):
             raise ValueError("Unknown command; use /tarot help")
-        deck = args[0] if args else "dawn"
+        deck = args[0] if args else default_deck(self.registry)
         spread = args[1] if len(args) > 1 else "single"
         cards, positions = self.selection(deck, spread)
         scope = json.dumps([team, channel, deck])
@@ -161,6 +164,7 @@ class Store:
 
 def load_registry(path: str, art_base_url: str = "", animated_art: bool = True) -> dict:
     data = json.loads(Path(path).read_text())
+    default_deck(data)
     ids = [c["id"] for c in data["cards"]]
     if len(ids) != len(set(ids)) or not ids:
         raise ValueError("Card IDs must be unique and nonempty")

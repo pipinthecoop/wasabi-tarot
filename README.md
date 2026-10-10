@@ -11,16 +11,16 @@ See [THEME-HANDOFF.md](THEME-HANDOFF.md) for native Slack controls, the stone-an
 ## Commands
 
 - `/tarot decks` and `/tarot spreads`
-- `/tarot draw dawn single`
-- `/tarot draw midnight three`
-- `/tarot draw dawn "Situation|Obstacle|Next step"`
-- `/tarot status dawn`
-- `/tarot shuffle dawn`
-- `/tarot schedule 08:00 America/New_York midnight single`
+- `/tarot draw crt single`
+- `/tarot draw crt three`
+- `/tarot draw crt "Situation|Obstacle|Next step"`
+- `/tarot status crt`
+- `/tarot shuffle crt`
+- `/tarot schedule 08:00 America/New_York crt single`
 - `/tarot schedules`
 - `/tarot unschedule SCHEDULE-ID` (creator only)
 
-Deck and spread selection is available through native modals or command arguments. `dawn` and `midnight` contain the same 78 standard card identities with different original geometric placeholder art. Meanings are brief prompts, not a full tarot guide. New cards may be added freely to the registry; no fixed 78-card assumption exists in the engine. Cards are upright only.
+Deck and spread selection is available through native modals or command arguments. **Phosphor Arcana (`crt`) is the default and the only selectable deck.** The starter decks are hidden with `selectable: false`; their IDs, artwork, saved readings and shoes remain compatible through explicit legacy commands. Hiding a deck never moves or resets cards. `dawn` and `midnight` contain the same 78 standard card identities with different original geometric placeholder art. Meanings are brief prompts, not a full tarot guide. New cards may be added freely to the registry; no fixed 78-card assumption exists in the engine. Cards are upright only.
 
 ## State and scheduling guarantees
 
@@ -72,3 +72,9 @@ Slack protocol references: [request verification](https://docs.slack.dev/authent
 Phosphor Arcana (`crt`) adds 78 original code-drawn ASCII green CRT scenes, distinct realistic CRT surface GIF loops, static PNG fallbacks, and a matching back. See [CRT-HANDOFF.md](CRT-HANDOFF.md) for public asset hosting, deck selection, regeneration, QA, and the Wasabi deployment checklist.
 
 See [HOSTING-RUNBOOK.md](HOSTING-RUNBOOK.md) for loopback Mac hosting and the separate no-secret asset/demo stage.
+
+## Public deck gallery
+
+Visit `/decks` (also `/decks/crt`) to browse all 78 Phosphor Arcana cards. Search by name/meaning, filter Major Arcana or each suit, and tap a card to enlarge it. Use the arrows or keyboard left/right to explore the filtered selection; tap again, tap outside, or press Escape to dismiss. GIF glow has a static PNG choice and defaults off with reduced motion. Captions stay below the artwork. The gallery fetches public card definitions and assets only: it never opens a live table, fetches private readings, draws, discards, or schedules.
+
+`default_deck` sets the registry default and must identify a selectable deck. New custom decks remain selectable unless marked `selectable: false`. Retired scheduled rituals are independent persisted records: hiding their deck does **not** stop them. Disable and reconcile legacy schedules explicitly before live migration; never transfer an enabled schedule or unresolved pending outbox into a running worker.

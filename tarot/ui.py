@@ -9,6 +9,8 @@ from pathlib import Path
 from typing import TYPE_CHECKING
 from urllib.parse import urlsplit
 
+from tarot.decks import available_decks, default_deck
+
 if TYPE_CHECKING:
     from tarot.core import Store
 
@@ -204,8 +206,8 @@ class Parlor:
 
     def modal(self, sid: str, mode: str) -> dict:
         registry = self.store.registry
-        options = [{"text": plain(v.get("name", k)[:75]), "value": k} for k, v in list(registry["decks"].items())[:100]]
-        defaults = next(iter(registry["decks"]))
+        options = [{"text": plain(v.get("name", k)[:75]), "value": k} for k, v in list(available_decks(registry).items())[:100]]
+        defaults = default_deck(registry)
         blocks = []
         hero = asset(self.store.theme, "header")
         if hero:

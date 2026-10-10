@@ -146,7 +146,9 @@ def handler(store: Store, secret: str, team: str, token: str = "", web: WebTable
                 return
             # Serve an allowlisted public bundle only; never filesystem paths from requests.
             static = {"/table": root / "web/table.html", "/embed/table": root / "web/table.html"}
-            for name in ("table.css", "table.js", "demo.json"):
+            static["/decks"] = root / "web/gallery.html"
+            static["/decks/crt"] = root / "web/gallery.html"
+            for name in ("table.css", "table.js", "demo.json", "gallery.css", "gallery.js"):
                 static["/web/" + name] = root / "web" / name
             for filename in (root / "art/theme").glob("*"):
                 if filename.suffix in (".png", ".webp"):

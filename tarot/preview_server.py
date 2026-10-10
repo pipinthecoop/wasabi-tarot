@@ -11,7 +11,9 @@ from pathlib import Path
 
 def handler(root: Path) -> type[BaseHTTPRequestHandler]:
     public = {"/table": root / "web/table.html", "/": root / "web/table.html", "/embed/table": root / "web/table.html"}
-    for name in ("table.css", "table.js", "demo.json"):
+    public["/decks"] = root / "web/gallery.html"
+    public["/decks/crt"] = root / "web/gallery.html"
+    for name in ("table.css", "table.js", "demo.json", "gallery.css", "gallery.js"):
         public["/web/" + name] = root / "web" / name
     for file in (root / "art/theme").glob("*"):
         if file.suffix in (".png", ".webp"):

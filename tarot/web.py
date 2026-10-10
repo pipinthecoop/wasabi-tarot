@@ -11,6 +11,7 @@ import time
 from urllib.parse import urlsplit
 
 from tarot.core import Store
+from tarot.decks import available_decks, default_deck
 from tarot.ui import Parlor, asset
 
 
@@ -91,7 +92,7 @@ class WebTable:
             for sid in rituals.values():
                 db.execute("UPDATE rituals SET status='open' WHERE id=?", (sid,))
             decks = []
-            for did, spec in self.store.registry["decks"].items():
+            for did, spec in available_decks(self.store.registry).items():
                 row = db.execute("SELECT draw,discard,cycle FROM shoes WHERE scope=?", (json.dumps([team, channel, did]),)).fetchone()
                 draw, discard, cycle = (json.loads(row[0]), json.loads(row[1]), row[2]) if row else (spec["cards"], [], 0)
                 decks.append(
@@ -114,6 +115,7 @@ class WebTable:
             "mode": "live",
             "channel": channel,
             "decks": decks,
+            "default_deck": default_deck(self.store.registry),
             "spreads": self.store.registry["spreads"],
             "rituals": rituals,
             "csrf": csrf,
