@@ -1,0 +1,657 @@
+{
+  "decks": {
+    "dawn": {
+      "name": "Dawn Geometry",
+      "license": "Original placeholder art, MIT",
+      "cards": [
+        "major-0",
+        "major-1",
+        "major-2",
+        "major-3",
+        "major-4",
+        "major-5",
+        "major-6",
+        "major-7",
+        "major-8",
+        "major-9",
+        "major-10",
+        "major-11",
+        "major-12",
+        "major-13",
+        "major-14",
+        "major-15",
+        "major-16",
+        "major-17",
+        "major-18",
+        "major-19",
+        "major-20",
+        "major-21",
+        "wands-ace",
+        "wands-two",
+        "wands-three",
+        "wands-four",
+        "wands-five",
+        "wands-six",
+        "wands-seven",
+        "wands-eight",
+        "wands-nine",
+        "wands-ten",
+        "wands-page",
+        "wands-knight",
+        "wands-queen",
+        "wands-king",
+        "cups-ace",
+        "cups-two",
+        "cups-three",
+        "cups-four",
+        "cups-five",
+        "cups-six",
+        "cups-seven",
+        "cups-eight",
+        "cups-nine",
+        "cups-ten",
+        "cups-page",
+        "cups-knight",
+        "cups-queen",
+        "cups-king",
+        "swords-ace",
+        "swords-two",
+        "swords-three",
+        "swords-four",
+        "swords-five",
+        "swords-six",
+        "swords-seven",
+        "swords-eight",
+        "swords-nine",
+        "swords-ten",
+        "swords-page",
+        "swords-knight",
+        "swords-queen",
+        "swords-king",
+        "pentacles-ace",
+        "pentacles-two",
+        "pentacles-three",
+        "pentacles-four",
+        "pentacles-five",
+        "pentacles-six",
+        "pentacles-seven",
+        "pentacles-eight",
+        "pentacles-nine",
+        "pentacles-ten",
+        "pentacles-page",
+        "pentacles-knight",
+        "pentacles-queen",
+        "pentacles-king"
+      ]
+    },
+    "midnight": {
+      "name": "Midnight Geometry",
+      "license": "Original placeholder art, MIT",
+      "cards": [
+        "major-0",
+        "major-1",
+        "major-2",
+        "major-3",
+        "major-4",
+        "major-5",
+        "major-6",
+        "major-7",
+        "major-8",
+        "major-9",
+        "major-10",
+        "major-11",
+        "major-12",
+        "major-13",
+        "major-14",
+        "major-15",
+        "major-16",
+        "major-17",
+        "major-18",
+        "major-19",
+        "major-20",
+        "major-21",
+        "wands-ace",
+        "wands-two",
+        "wands-three",
+        "wands-four",
+        "wands-five",
+        "wands-six",
+        "wands-seven",
+        "wands-eight",
+        "wands-nine",
+        "wands-ten",
+        "wands-page",
+        "wands-knight",
+        "wands-queen",
+        "wands-king",
+        "cups-ace",
+        "cups-two",
+        "cups-three",
+        "cups-four",
+        "cups-five",
+        "cups-six",
+        "cups-seven",
+        "cups-eight",
+        "cups-nine",
+        "cups-ten",
+        "cups-page",
+        "cups-knight",
+        "cups-queen",
+        "cups-king",
+        "swords-ace",
+        "swords-two",
+        "swords-three",
+        "swords-four",
+        "swords-five",
+        "swords-six",
+        "swords-seven",
+        "swords-eight",
+        "swords-nine",
+        "swords-ten",
+        "swords-page",
+        "swords-knight",
+        "swords-queen",
+        "swords-king",
+        "pentacles-ace",
+        "pentacles-two",
+        "pentacles-three",
+        "pentacles-four",
+        "pentacles-five",
+        "pentacles-six",
+        "pentacles-seven",
+        "pentacles-eight",
+        "pentacles-nine",
+        "pentacles-ten",
+        "pentacles-page",
+        "pentacles-knight",
+        "pentacles-queen",
+        "pentacles-king"
+      ]
+    }
+  },
+  "cards": [
+    {
+      "id": "major-0",
+      "name": "The Fool",
+      "meaning": "Begin with curiosity",
+      "art": {}
+    },
+    {
+      "id": "major-1",
+      "name": "The Magician",
+      "meaning": "Use your available tools",
+      "art": {}
+    },
+    {
+      "id": "major-2",
+      "name": "The High Priestess",
+      "meaning": "Listen to intuition",
+      "art": {}
+    },
+    {
+      "id": "major-3",
+      "name": "The Empress",
+      "meaning": "Nurture what grows",
+      "art": {}
+    },
+    {
+      "id": "major-4",
+      "name": "The Emperor",
+      "meaning": "Build useful structure",
+      "art": {}
+    },
+    {
+      "id": "major-5",
+      "name": "The Hierophant",
+      "meaning": "Examine inherited wisdom",
+      "art": {}
+    },
+    {
+      "id": "major-6",
+      "name": "The Lovers",
+      "meaning": "Choose with care",
+      "art": {}
+    },
+    {
+      "id": "major-7",
+      "name": "The Chariot",
+      "meaning": "Direct your energy",
+      "art": {}
+    },
+    {
+      "id": "major-8",
+      "name": "Strength",
+      "meaning": "Practice patient courage",
+      "art": {}
+    },
+    {
+      "id": "major-9",
+      "name": "The Hermit",
+      "meaning": "Make room for reflection",
+      "art": {}
+    },
+    {
+      "id": "major-10",
+      "name": "Wheel of Fortune",
+      "meaning": "Adapt to change",
+      "art": {}
+    },
+    {
+      "id": "major-11",
+      "name": "Justice",
+      "meaning": "Consider fairness",
+      "art": {}
+    },
+    {
+      "id": "major-12",
+      "name": "The Hanged One",
+      "meaning": "Try a new perspective",
+      "art": {}
+    },
+    {
+      "id": "major-13",
+      "name": "Death",
+      "meaning": "Allow an ending",
+      "art": {}
+    },
+    {
+      "id": "major-14",
+      "name": "Temperance",
+      "meaning": "Find a workable balance",
+      "art": {}
+    },
+    {
+      "id": "major-15",
+      "name": "The Devil",
+      "meaning": "Notice attachments",
+      "art": {}
+    },
+    {
+      "id": "major-16",
+      "name": "The Tower",
+      "meaning": "Rebuild after disruption",
+      "art": {}
+    },
+    {
+      "id": "major-17",
+      "name": "The Star",
+      "meaning": "Keep a hopeful practice",
+      "art": {}
+    },
+    {
+      "id": "major-18",
+      "name": "The Moon",
+      "meaning": "Sit with uncertainty",
+      "art": {}
+    },
+    {
+      "id": "major-19",
+      "name": "The Sun",
+      "meaning": "Welcome clarity",
+      "art": {}
+    },
+    {
+      "id": "major-20",
+      "name": "Judgement",
+      "meaning": "Review and renew",
+      "art": {}
+    },
+    {
+      "id": "major-21",
+      "name": "The World",
+      "meaning": "Recognize completion",
+      "art": {}
+    },
+    {
+      "id": "wands-ace",
+      "name": "Ace of Wands",
+      "meaning": "Reflect on initiative and the stage represented by ace.",
+      "art": {}
+    },
+    {
+      "id": "wands-two",
+      "name": "Two of Wands",
+      "meaning": "Reflect on initiative and the stage represented by two.",
+      "art": {}
+    },
+    {
+      "id": "wands-three",
+      "name": "Three of Wands",
+      "meaning": "Reflect on initiative and the stage represented by three.",
+      "art": {}
+    },
+    {
+      "id": "wands-four",
+      "name": "Four of Wands",
+      "meaning": "Reflect on initiative and the stage represented by four.",
+      "art": {}
+    },
+    {
+      "id": "wands-five",
+      "name": "Five of Wands",
+      "meaning": "Reflect on initiative and the stage represented by five.",
+      "art": {}
+    },
+    {
+      "id": "wands-six",
+      "name": "Six of Wands",
+      "meaning": "Reflect on initiative and the stage represented by six.",
+      "art": {}
+    },
+    {
+      "id": "wands-seven",
+      "name": "Seven of Wands",
+      "meaning": "Reflect on initiative and the stage represented by seven.",
+      "art": {}
+    },
+    {
+      "id": "wands-eight",
+      "name": "Eight of Wands",
+      "meaning": "Reflect on initiative and the stage represented by eight.",
+      "art": {}
+    },
+    {
+      "id": "wands-nine",
+      "name": "Nine of Wands",
+      "meaning": "Reflect on initiative and the stage represented by nine.",
+      "art": {}
+    },
+    {
+      "id": "wands-ten",
+      "name": "Ten of Wands",
+      "meaning": "Reflect on initiative and the stage represented by ten.",
+      "art": {}
+    },
+    {
+      "id": "wands-page",
+      "name": "Page of Wands",
+      "meaning": "Reflect on initiative and the stage represented by page.",
+      "art": {}
+    },
+    {
+      "id": "wands-knight",
+      "name": "Knight of Wands",
+      "meaning": "Reflect on initiative and the stage represented by knight.",
+      "art": {}
+    },
+    {
+      "id": "wands-queen",
+      "name": "Queen of Wands",
+      "meaning": "Reflect on initiative and the stage represented by queen.",
+      "art": {}
+    },
+    {
+      "id": "wands-king",
+      "name": "King of Wands",
+      "meaning": "Reflect on initiative and the stage represented by king.",
+      "art": {}
+    },
+    {
+      "id": "cups-ace",
+      "name": "Ace of Cups",
+      "meaning": "Reflect on connection and the stage represented by ace.",
+      "art": {}
+    },
+    {
+      "id": "cups-two",
+      "name": "Two of Cups",
+      "meaning": "Reflect on connection and the stage represented by two.",
+      "art": {}
+    },
+    {
+      "id": "cups-three",
+      "name": "Three of Cups",
+      "meaning": "Reflect on connection and the stage represented by three.",
+      "art": {}
+    },
+    {
+      "id": "cups-four",
+      "name": "Four of Cups",
+      "meaning": "Reflect on connection and the stage represented by four.",
+      "art": {}
+    },
+    {
+      "id": "cups-five",
+      "name": "Five of Cups",
+      "meaning": "Reflect on connection and the stage represented by five.",
+      "art": {}
+    },
+    {
+      "id": "cups-six",
+      "name": "Six of Cups",
+      "meaning": "Reflect on connection and the stage represented by six.",
+      "art": {}
+    },
+    {
+      "id": "cups-seven",
+      "name": "Seven of Cups",
+      "meaning": "Reflect on connection and the stage represented by seven.",
+      "art": {}
+    },
+    {
+      "id": "cups-eight",
+      "name": "Eight of Cups",
+      "meaning": "Reflect on connection and the stage represented by eight.",
+      "art": {}
+    },
+    {
+      "id": "cups-nine",
+      "name": "Nine of Cups",
+      "meaning": "Reflect on connection and the stage represented by nine.",
+      "art": {}
+    },
+    {
+      "id": "cups-ten",
+      "name": "Ten of Cups",
+      "meaning": "Reflect on connection and the stage represented by ten.",
+      "art": {}
+    },
+    {
+      "id": "cups-page",
+      "name": "Page of Cups",
+      "meaning": "Reflect on connection and the stage represented by page.",
+      "art": {}
+    },
+    {
+      "id": "cups-knight",
+      "name": "Knight of Cups",
+      "meaning": "Reflect on connection and the stage represented by knight.",
+      "art": {}
+    },
+    {
+      "id": "cups-queen",
+      "name": "Queen of Cups",
+      "meaning": "Reflect on connection and the stage represented by queen.",
+      "art": {}
+    },
+    {
+      "id": "cups-king",
+      "name": "King of Cups",
+      "meaning": "Reflect on connection and the stage represented by king.",
+      "art": {}
+    },
+    {
+      "id": "swords-ace",
+      "name": "Ace of Swords",
+      "meaning": "Reflect on discernment and the stage represented by ace.",
+      "art": {}
+    },
+    {
+      "id": "swords-two",
+      "name": "Two of Swords",
+      "meaning": "Reflect on discernment and the stage represented by two.",
+      "art": {}
+    },
+    {
+      "id": "swords-three",
+      "name": "Three of Swords",
+      "meaning": "Reflect on discernment and the stage represented by three.",
+      "art": {}
+    },
+    {
+      "id": "swords-four",
+      "name": "Four of Swords",
+      "meaning": "Reflect on discernment and the stage represented by four.",
+      "art": {}
+    },
+    {
+      "id": "swords-five",
+      "name": "Five of Swords",
+      "meaning": "Reflect on discernment and the stage represented by five.",
+      "art": {}
+    },
+    {
+      "id": "swords-six",
+      "name": "Six of Swords",
+      "meaning": "Reflect on discernment and the stage represented by six.",
+      "art": {}
+    },
+    {
+      "id": "swords-seven",
+      "name": "Seven of Swords",
+      "meaning": "Reflect on discernment and the stage represented by seven.",
+      "art": {}
+    },
+    {
+      "id": "swords-eight",
+      "name": "Eight of Swords",
+      "meaning": "Reflect on discernment and the stage represented by eight.",
+      "art": {}
+    },
+    {
+      "id": "swords-nine",
+      "name": "Nine of Swords",
+      "meaning": "Reflect on discernment and the stage represented by nine.",
+      "art": {}
+    },
+    {
+      "id": "swords-ten",
+      "name": "Ten of Swords",
+      "meaning": "Reflect on discernment and the stage represented by ten.",
+      "art": {}
+    },
+    {
+      "id": "swords-page",
+      "name": "Page of Swords",
+      "meaning": "Reflect on discernment and the stage represented by page.",
+      "art": {}
+    },
+    {
+      "id": "swords-knight",
+      "name": "Knight of Swords",
+      "meaning": "Reflect on discernment and the stage represented by knight.",
+      "art": {}
+    },
+    {
+      "id": "swords-queen",
+      "name": "Queen of Swords",
+      "meaning": "Reflect on discernment and the stage represented by queen.",
+      "art": {}
+    },
+    {
+      "id": "swords-king",
+      "name": "King of Swords",
+      "meaning": "Reflect on discernment and the stage represented by king.",
+      "art": {}
+    },
+    {
+      "id": "pentacles-ace",
+      "name": "Ace of Pentacles",
+      "meaning": "Reflect on resources and the stage represented by ace.",
+      "art": {}
+    },
+    {
+      "id": "pentacles-two",
+      "name": "Two of Pentacles",
+      "meaning": "Reflect on resources and the stage represented by two.",
+      "art": {}
+    },
+    {
+      "id": "pentacles-three",
+      "name": "Three of Pentacles",
+      "meaning": "Reflect on resources and the stage represented by three.",
+      "art": {}
+    },
+    {
+      "id": "pentacles-four",
+      "name": "Four of Pentacles",
+      "meaning": "Reflect on resources and the stage represented by four.",
+      "art": {}
+    },
+    {
+      "id": "pentacles-five",
+      "name": "Five of Pentacles",
+      "meaning": "Reflect on resources and the stage represented by five.",
+      "art": {}
+    },
+    {
+      "id": "pentacles-six",
+      "name": "Six of Pentacles",
+      "meaning": "Reflect on resources and the stage represented by six.",
+      "art": {}
+    },
+    {
+      "id": "pentacles-seven",
+      "name": "Seven of Pentacles",
+      "meaning": "Reflect on resources and the stage represented by seven.",
+      "art": {}
+    },
+    {
+      "id": "pentacles-eight",
+      "name": "Eight of Pentacles",
+      "meaning": "Reflect on resources and the stage represented by eight.",
+      "art": {}
+    },
+    {
+      "id": "pentacles-nine",
+      "name": "Nine of Pentacles",
+      "meaning": "Reflect on resources and the stage represented by nine.",
+      "art": {}
+    },
+    {
+      "id": "pentacles-ten",
+      "name": "Ten of Pentacles",
+      "meaning": "Reflect on resources and the stage represented by ten.",
+      "art": {}
+    },
+    {
+      "id": "pentacles-page",
+      "name": "Page of Pentacles",
+      "meaning": "Reflect on resources and the stage represented by page.",
+      "art": {}
+    },
+    {
+      "id": "pentacles-knight",
+      "name": "Knight of Pentacles",
+      "meaning": "Reflect on resources and the stage represented by knight.",
+      "art": {}
+    },
+    {
+      "id": "pentacles-queen",
+      "name": "Queen of Pentacles",
+      "meaning": "Reflect on resources and the stage represented by queen.",
+      "art": {}
+    },
+    {
+      "id": "pentacles-king",
+      "name": "King of Pentacles",
+      "meaning": "Reflect on resources and the stage represented by king.",
+      "art": {}
+    }
+  ],
+  "spreads": {
+    "single": [
+      "Focus"
+    ],
+    "three": [
+      "Past",
+      "Present",
+      "Possible path"
+    ],
+    "decision": [
+      "Option A",
+      "Option B",
+      "Consideration"
+    ]
+  }
+}

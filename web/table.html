@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><title>The Midnight Parlor · Wasabi Tarot</title><link rel="stylesheet" href="/web/table.css"><script src="/web/table.js" defer></script></head>
+<body>
+<div class="sky" aria-hidden="true"></div>
+<header class="masthead"><a href="/table" class="wordmark"><span class="sigil" aria-hidden="true">☾</span><span>WASABI TAROT<small>A little ritual for the everyday</small></span></a><button id="connect" class="quiet-button">Connect Slack table</button></header>
+<main>
+<section class="intro"><p class="eyebrow">✦ THE CARDS ARE WAITING ✦</p><h1>The Midnight<br><em>Parlor</em></h1><p class="lead">A quiet table. A question held.<br>A possible path.</p><div class="mode" id="mode"><span class="lamp" aria-hidden="true"></span>Isolated demo · your Slack deck is untouched</div></section>
+<section class="parlor" aria-label="Tarot table">
+<div class="frame-top" aria-hidden="true">✦</div>
+<div class="table-content">
+<div class="table-heading"><div><p class="eyebrow">YOUR RITUAL</p><h2>Set the table</h2></div><div class="shoe" aria-live="polite"><strong id="remaining">78</strong><span>in draw</span><i>·</i><strong id="discard">0</strong><span>resting</span></div></div>
+<form id="choices" class="controls"><label>Art deck<select id="deck" name="deck"><option value="midnight">Midnight Geometry</option><option value="dawn">Dawn Geometry</option></select></label><label>Shape of the reading<select id="spread" name="spread"><option value="three">Three-card path</option><option value="single">Single card</option><option value="decision">A decision</option><option value="custom">Custom spread</option></select></label><label id="custom-wrap" hidden>Your positions<input id="custom" maxlength="1000" placeholder="Situation | Release | Next step"></label></form>
+<p class="table-whisper" id="whisper">Hold your question lightly. Let the cards offer a perspective.</p>
+<div class="spread" id="cards" aria-label="Cards waiting to be revealed"></div>
+<div class="action-row"><button id="draw" class="stone-button primary"><span>Reveal the cards</span></button><button id="shuffle" class="stone-button"><span>Shuffle the deck</span></button></div>
+<div class="table-footer"><span id="cycle">Cycle 1 · finite deck · no automatic reshuffle</span><button id="daily" class="ritual-link">☾ Set a daily ritual</button></div>
+</div>
+<div class="frame-bottom" aria-hidden="true">☾</div>
+</section>
+<section id="reading" class="reading" hidden aria-labelledby="reading-title"><p class="eyebrow">✦ A MOMENT TO REFLECT ✦</p><h2 id="reading-title">What meets you here</h2><div id="meanings" class="meanings"></div><p class="closing">Keep what resonates. Leave the rest.</p><button id="reset-view" class="quiet-button">Return to the table</button></section>
+<div id="status" role="status" aria-live="polite" class="status">Reflection, not certainty. Your next step remains yours.</div>
+<footer class="site-footer"><span>☾</span><p>Every draw has a place. Every card has a rest.</p><small>Original celestial artwork · Custom decks welcome · Wasabi Tarot</small></footer>
+</main>
+<dialog id="confirm"><form method="dialog"><p class="eyebrow">A NEW CYCLE</p><h2>Return every card?</h2><p>This gathers draw and discard back into one shuffled deck. In a live table, it affects everyone reading in this channel.</p><div class="dialog-actions"><button value="cancel" class="quiet-button">Leave it as it is</button><button value="shuffle" class="stone-button"><span>Shuffle all cards</span></button></div></form></dialog>
+<dialog id="login"><form id="login-form"><p class="eyebrow">YOUR PRIVATE TABLE</p><h2>Enter from Slack</h2><p>Run <code>/tarot table</code> in your channel, then enter the one-time code here. The code is never part of a URL.</p><label>One-time access code<input id="login-code" type="password" autocomplete="off" required maxlength="100"></label><p id="login-error" role="alert"></p><div class="dialog-actions"><button type="button" id="login-cancel" class="quiet-button">Stay in the demo</button><button class="stone-button" type="submit"><span>Enter the parlor</span></button></div></form></dialog>
+<dialog id="schedule"><form id="schedule-form"><p class="eyebrow">MAKE A LITTLE ROOM</p><h2>A daily ritual</h2><p>Your selected deck and spread, at a time that belongs to you.</p><label>Daily time<input id="time" type="time" value="08:00" required></label><label>IANA time zone<input id="zone" value="UTC" placeholder="America/New_York" required maxlength="100"></label><p>Daylight saving is honored. An exhausted deck rests until you shuffle.</p><div class="dialog-actions"><button id="schedule-cancel" type="button" class="quiet-button">Leave the table</button><button class="stone-button" type="submit"><span>Begin the ritual</span></button></div></form></dialog>
+</body></html>

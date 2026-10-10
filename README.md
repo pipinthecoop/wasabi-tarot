@@ -4,6 +4,10 @@ A Slack tarot bot with finite shared decks, durable draw history, and daily sche
 
 Python 3.12+; zero third-party runtime dependencies. HTTP slash-command ingress verifies Slack HMAC signatures and workspace identity, and commits each request plus outgoing reading in a single SQLite transaction before acknowledging. A background worker runs daily schedules and posts normal `chat.postMessage` messages. People can reply in threads and add reactions using Slack itself; the bot does not ingest their replies or reactions.
 
+## Midnight Parlor upgrade
+
+See [THEME-HANDOFF.md](THEME-HANDOFF.md) for native Slack controls, the stone-and-gold web table, optional authenticated access and read-only Work Objects embedding. /tarot now opens a graphical private parlor; all existing text commands and finite deck state remain available.
+
 ## Commands
 
 - `/tarot decks` and `/tarot spreads`
@@ -16,7 +20,7 @@ Python 3.12+; zero third-party runtime dependencies. HTTP slash-command ingress 
 - `/tarot schedules`
 - `/tarot unschedule SCHEDULE-ID` (creator only)
 
-Deck and spread selection is through command arguments, not interactive menus. `dawn` and `midnight` contain the same 78 standard card identities with different original geometric placeholder art. Meanings are brief prompts, not a full tarot guide. New cards may be added freely to the registry; no fixed 78-card assumption exists in the engine. Cards are upright only.
+Deck and spread selection is available through native modals or command arguments. `dawn` and `midnight` contain the same 78 standard card identities with different original geometric placeholder art. Meanings are brief prompts, not a full tarot guide. New cards may be added freely to the registry; no fixed 78-card assumption exists in the engine. Cards are upright only.
 
 ## State and scheduling guarantees
 
@@ -63,3 +67,5 @@ Card membership changes never reset an active shoe automatically. Status reports
 The wheel packages the Python runtime; deploy with the registry alongside it, or use the Docker build which includes the example registry. Docker build and live Slack integration require Wasabi's deployment environment.
 
 Slack protocol references: [request verification](https://docs.slack.dev/authentication/verifying-requests-from-slack/), [slash commands](https://docs.slack.dev/interactivity/implementing-slash-commands/), [posting normal messages](https://docs.slack.dev/reference/methods/chat.postMessage/).
+
+Publication baseline for this update: [pipinthecoop/wasabi-tarot](https://github.com/pipinthecoop/wasabi-tarot), commit 7b1ced1fab61c55413d215cf315c90b862bee6f1. The parent must compare the current head and preserve concurrent changes when applying the changed-file package. This update has not been published or deployed here.

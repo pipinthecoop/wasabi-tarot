@@ -2,3 +2,14 @@
 !tarot/
 !tarot/*.py
 !registry.json
+!theme.json
+!web/
+!web/*
+!art/
+!art/dawn/
+!art/dawn/*.png
+!art/midnight/
+!art/midnight/*.png
+!art/theme/
+!art/theme/*.png
+!art/theme/*.webp

@@ -15,8 +15,9 @@ from zoneinfo import ZoneInfo
 
 
 class Store:
-    def __init__(self, path: str, registry: dict):
+    def __init__(self, path: str, registry: dict, theme: dict | None = None):
         self.path, self.registry = path, registry
+        self.theme = theme or {"name": "The Midnight Parlor"}
         with self.connect() as db:
             db.executescript("""
             PRAGMA journal_mode=WAL;
@@ -109,20 +110,18 @@ class Store:
                 raise ValueError(f"Only {len(draw)} cards remain. Explicitly shuffle before drawing; no cards consumed.")
             picked = [draw.pop() for _ in positions]
             discard.extend(picked)
-            lines = [f"{p}: {cards[c]['name']} — {cards[c]['meaning']}" for p, c in zip(positions, picked)]
-            payload: dict = {
-                "channel": channel,
-                "text": f"Tarot · {deck} · cycle {cycle}\n" + "\n".join(lines),
-                "blocks": [
-                    {"type": "section", "text": {"type": "plain_text", "text": f"{p}: {cards[c]['name']}\n{cards[c]['meaning']}"}}
-                    for p, c in zip(positions, picked)
-                ],
+            from tarot.ui import reading
+
+            payload = reading(self.theme, self.registry, channel, deck, positions, picked, cycle, len(draw))
+            result = {
+                "text": "Reading queued in this channel.",
+                "payload": payload,
+                "cards": picked,
+                "deck": deck,
+                "positions": positions,
+                "remaining": len(draw),
+                "card_details": [{"name": cards[c]["name"], "meaning": cards[c]["meaning"], "art": cards[c].get("art", {}).get(deck, "")} for c in picked],
             }
-            for c in picked:
-                url = cards[c].get("art", {}).get(deck)
-                if url:
-                    payload["blocks"].append({"type": "image", "image_url": url, "alt_text": cards[c]["name"]})
-            result = {"text": "Reading queued in this channel.", "payload": payload, "cards": picked}
         else:
             notice = " Membership changed; shuffle explicitly to adopt it." if membership_changed and action == "status" else ""
             result = {"text": f"{deck}: {len(draw)} draw / {len(discard)} discard; cycle {cycle}{notice}"}

@@ -1,0 +1,14 @@
+{
+  "features": {
+    "rich_previews": {
+      "is_active": true,
+      "entity_types": ["slack#/entities/item"]
+    }
+  },
+  "settings": {
+    "event_subscriptions": {
+      "request_url": "https://YOUR-HOST/slack/events",
+      "bot_events": ["entity_details_requested"]
+    }
+  }
+}

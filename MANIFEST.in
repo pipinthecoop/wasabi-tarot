@@ -3,3 +3,7 @@ recursive-include art *.svg *.png
 recursive-include tools *.py
 recursive-include .github *.yml
 include .gitignore
+include theme.json THEME-HANDOFF.md slack-work-objects.optional.json
+recursive-include art/theme *.webp
+recursive-include web *.html *.css *.js *.json
+recursive-include art/theme *.md
