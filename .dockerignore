@@ -1,0 +1,4 @@
+*
+!tarot/
+!tarot/*.py
+!registry.json

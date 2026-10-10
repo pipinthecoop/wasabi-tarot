@@ -1,0 +1,9 @@
+{
+  "display_information": {"name": "Wasabi Tarot", "description": "Finite shared tarot readings"},
+  "features": {
+    "bot_user": {"display_name": "Wasabi Tarot", "always_online": false},
+    "slash_commands": [{"command": "/tarot", "description": "Draw, shuffle, or schedule tarot", "usage_hint": "help", "url": "https://YOUR-HOST/slack/commands", "should_escape": false}]
+  },
+  "oauth_config": {"scopes": {"bot": ["commands", "chat:write"]}},
+  "settings": {"socket_mode_enabled": false}
+}

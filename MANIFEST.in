@@ -1,0 +1,5 @@
+include registry.json Dockerfile .dockerignore .env.example slack-manifest.example.json
+recursive-include art *.svg *.png
+recursive-include tools *.py
+recursive-include .github *.yml
+include .gitignore
