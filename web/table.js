@@ -33,6 +33,7 @@ function deckState() {
   return shoes[$('deck').value];
 }
 function backs() {
+  closeCard();
   revealed = false;
   displayedCards = null; displayedPositions = null;
   $('reading').hidden = true;
@@ -55,7 +56,8 @@ function counts() {
   $('discard').textContent = live ? shoe.discard : shoe.discard.length;
   $('cycle').textContent = 'Cycle ' + shoe.cycle + ' · finite deck · no automatic reshuffle';
 }
-function reveal(cards, names) {
+function reveal(cards, names, flip = true) {
+  closeCard();
   revealed = true;
   displayedCards = cards; displayedPositions = names;
   $('cards').replaceChildren(); $('meanings').replaceChildren();
@@ -67,8 +69,21 @@ function reveal(cards, names) {
     art.src = resolvedArt(source && (source.startsWith('https://') || source.startsWith('/assets/')) ? source : '/assets/theme/card-back.webp');
     art.onerror = () => { if (card.static_art && art.dataset.fallback !== '1') { art.dataset.fallback = '1'; art.src = resolvedArt(card.static_art); } };
     art.alt = names[index] + ': ' + card.name;
-    face.append(art, node('span', card.name, 'card-name'));
-    slot.append(face, node('small', names[index])); $('cards').append(slot);
+    const turn = node('div', undefined, 'card-turn');
+    const front = node('div', undefined, 'card-side card-front');
+    const back = node('div', undefined, 'card-side card-back');
+    const backArt = node('img');
+    backArt.src = resolvedArt(live?.backs?.[$('deck').value] || registry.decks[$('deck').value].card_back);
+    backArt.alt = ''; backArt.setAttribute('aria-hidden', 'true');
+    back.append(backArt); front.append(art); turn.append(back, front); face.append(turn);
+    face.tabIndex = 0; face.setAttribute('role', 'button');
+    face.setAttribute('aria-label', 'Enlarge ' + card.name);
+    face.setAttribute('aria-haspopup', 'dialog'); face.setAttribute('aria-expanded', 'false');
+    face.addEventListener('click', () => openCard(face, art, card.name, names[index]));
+    face.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openCard(face, art, card.name, names[index]); } });
+    slot.append(face, node('span', card.name, 'card-name'), node('small', names[index])); $('cards').append(slot);
+    if (!flip || motionPreference.matches) face.classList.add('is-revealed');
+    else requestAnimationFrame(() => requestAnimationFrame(() => face.classList.add('is-revealed')));
     const meaning = node('article', undefined, 'meaning');
     meaning.append(node('small', names[index].toUpperCase()), node('h3', card.name), node('p', card.meaning));
     $('meanings').append(meaning);
@@ -76,6 +91,29 @@ function reveal(cards, names) {
   $('reading').hidden = false;
   counts();
 }
+const cardFocus = node('dialog', undefined, 'card-focus');
+cardFocus.setAttribute('aria-label', 'Enlarged tarot card');
+const focusClose = node('button', 'Return to the reading', 'quiet-button');
+const focusContent = node('div', undefined, 'focus-content');
+cardFocus.append(focusContent, focusClose); document.body.append(cardFocus);
+let focusedCard = null;
+function closeCard() { if (cardFocus.open) cardFocus.close(); }
+function openCard(face, art, name, position) {
+  if (cardFocus.open) { closeCard(); return; }
+  focusedCard = face; face.setAttribute('aria-expanded', 'true');
+  const image = art.cloneNode(true);
+  const frame = node('button', undefined, 'focus-art');
+  frame.setAttribute('aria-label', 'Return to the reading'); frame.append(image);
+  frame.addEventListener('click', closeCard);
+  focusContent.replaceChildren(frame, node('span', name, 'card-name'), node('small', position));
+  cardFocus.showModal();
+}
+focusClose.addEventListener('click', closeCard);
+cardFocus.addEventListener('click', closeCard);
+cardFocus.addEventListener('close', () => {
+  if (focusedCard) { focusedCard.setAttribute('aria-expanded', 'false'); if (focusedCard.isConnected) focusedCard.focus({preventScroll: true}); }
+  focusedCard = null;
+});
 function values() {
   const val = {deck: {value: {selected_option: {value: $('deck').value}}}, spread: {value: {selected_option: {value: $('spread').value === 'custom' ? 'single' : $('spread').value}}}, custom: {value: {value: $('spread').value === 'custom' ? $('custom').value : ''}}, time: {value: {selected_time: $('time').value}}, zone: {value: {value: $('zone').value}}};
   return val;
@@ -167,8 +205,8 @@ $('login-form').addEventListener('submit', async e => {
     await refreshLive(); $('login').close(); backs(); status('Your verified Slack channel table is open.');
   } catch (error) { $('login-error').textContent = error.message; }
 });
-$('animate').addEventListener('change', () => { if (displayedCards) reveal(displayedCards, displayedPositions); });
-motionPreference.addEventListener('change', e => { $('animate').checked = !e.matches; if (displayedCards) reveal(displayedCards, displayedPositions); });
+$('animate').addEventListener('change', () => { if (displayedCards) reveal(displayedCards, displayedPositions, false); });
+motionPreference.addEventListener('change', e => { $('animate').checked = !e.matches; if (displayedCards) reveal(displayedCards, displayedPositions, false); });
 async function init() {
   $('animate').checked = !motionPreference.matches;
   registry = await (await fetch('/web/demo.json')).json();
