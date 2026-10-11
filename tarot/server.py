@@ -101,7 +101,7 @@ def api(token: str, method: str, payload: dict) -> dict:
     return result
 
 
-def handler(store: Store, secret: str, team: str, token: str = "", web: WebTable | None = None) -> type[BaseHTTPRequestHandler]:
+def handler(store: Store, secret: str, team: str, token: str = "", web: WebTable | None = None, runtime_status: dict | None = None) -> type[BaseHTTPRequestHandler]:
     parlor = Parlor(store)
     table = web or WebTable(store)
     root = Path(__file__).resolve().parents[1]
@@ -135,8 +135,7 @@ def handler(store: Store, secret: str, team: str, token: str = "", web: WebTable
         def do_GET(self) -> None:
             path = urllib.parse.urlsplit(self.path).path
             if path == "/health":
-                self.send_response(200)
-                self.end_headers()
+                self.respond(200, {"status": "ok", "mode": "slack-runtime", "slack_ingress": True, "database": True, "worker": False, "scheduler": False, **(runtime_status or {})})
                 return
             if path == "/api/table":
                 try:
@@ -325,12 +324,34 @@ def bind_address() -> tuple[str, int]:
     return host, port
 
 
+
+def runtime_identity() -> dict:
+    """Read-only application startup auth; never logs credential values or raw responses."""
+    token = os.environ["SLACK_BOT_TOKEN"]
+    request = urllib.request.Request("https://slack.com/api/auth.test", data=b"{}", headers={"Authorization": f"Bearer {token}", "Content-Type": "application/json; charset=utf-8"})
+    with urllib.request.urlopen(request, timeout=15) as response:
+        result = json.load(response)
+        scopes = set(filter(None, response.headers.get("x-oauth-scopes", "").split(",")))
+    if not result.get("ok") or result.get("team_id") != os.environ["SLACK_TEAM_ID"] or not result.get("bot_id"):
+        raise ValueError("Application auth identity failed")
+    if not {"commands", "chat:write"} <= scopes:
+        raise ValueError("Existing bot scopes do not satisfy this deployment")
+    return {"authenticated": True, "team_id": result["team_id"], "bot_id": result["bot_id"], "user_id": result.get("user_id"), "bot_user_name": result.get("user"), "required_scopes_present": True, "app_id": result.get("app_id"), "app_id_verified": bool(result.get("app_id") and result.get("app_id") == os.environ.get("EXPECTED_SLACK_APP_ID"))}
+
+
 def main() -> None:
     for name in ("SLACK_SIGNING_SECRET", "SLACK_TEAM_ID", "SLACK_BOT_TOKEN"):
         if not os.environ.get(name):
             raise ValueError(f"{name} is required")
     if os.environ.get("RUN_WORKER", "1") == "1" and not os.environ.get("SLACK_BOT_TOKEN"):
         raise ValueError("SLACK_BOT_TOKEN is required for worker")
+    if os.environ.get("VERIFY_RUNTIME_IDENTITY", "0") == "1":
+        identity = runtime_identity()
+        report = os.environ.get("RUNTIME_IDENTITY_REPORT")
+        if report:
+            descriptor = os.open(report, os.O_WRONLY | os.O_CREAT | os.O_TRUNC | os.O_NOFOLLOW, 0o600)
+            with os.fdopen(descriptor, "w") as stream:
+                json.dump(identity, stream)
     path = os.environ.get("DATABASE_PATH", "data/tarot.sqlite3")
     Path(path).parent.mkdir(parents=True, exist_ok=True)
     theme = load_theme(os.environ.get("THEME_PATH", "theme.json"), os.environ.get("THEME_ASSET_BASE_URL", ""))
@@ -349,7 +370,7 @@ def main() -> None:
         Thread(target=worker, args=(store, os.environ["SLACK_BOT_TOKEN"]), daemon=True).start()
     server = ThreadingHTTPServer(
         bind_address(),
-        handler(store, os.environ["SLACK_SIGNING_SECRET"], os.environ["SLACK_TEAM_ID"], os.environ.get("SLACK_BOT_TOKEN", ""), web),
+        handler(store, os.environ["SLACK_SIGNING_SECRET"], os.environ["SLACK_TEAM_ID"], os.environ.get("SLACK_BOT_TOKEN", ""), web, {"worker": os.environ.get("RUN_WORKER", "1") == "1", "scheduler": os.environ.get("RUN_WORKER", "1") == "1"}),
     )
     server.serve_forever()
 
