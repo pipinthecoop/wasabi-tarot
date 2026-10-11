@@ -199,10 +199,36 @@ class Parlor:
         with self.store.connect() as db:
             db.execute("BEGIN IMMEDIATE")
             row = self.row(db, sid, team, user)
+            if row[4] == "done":
+                outcome = db.execute("SELECT result FROM requests WHERE id=?", ("ritual:" + sid,)).fetchone()
+                if outcome and json.loads(outcome[0]).get("card_details"):
+                    saved = json.loads(outcome[0])
+                    delivery = db.execute("SELECT status,error FROM outbox WHERE id=?", ("ritual:" + sid,)).fetchone()
+                    message = "This is your saved reading. No additional cards were drawn."
+                    if delivery and delivery == ("failed", "not_in_channel"):
+                        message += " Wasabi Tarot is not in this channel, so posting failed. Invite the app, then recover this saved reading; do not redraw."
+                    elif delivery and delivery[0] == "sent":
+                        message += " It was posted in the channel."
+                    elif delivery and delivery[0] in ("failed", "uncertain", "quarantined"):
+                        message += " Channel delivery needs review; it will not be replayed automatically."
+                    return {"view": self.reading_receipt(saved, message), "text": message}
+                return {"view": self.receipt("Ritual complete", "This ritual is complete. Open /tarot again for new controls; no cards were consumed by this click."), "text": "Ritual complete."}
+            if row[4] == "cancelled":
+                return {"view": self.receipt("Ritual cancelled", "Open /tarot again for new controls. No cards were consumed."), "text": "Ritual cancelled."}
+            if row[4] == "open":
+                return {"text": "This ritual is already open. Return to its modal; no extra cards were drawn."}
             if row[4] != "ready":
-                return {"text": "This ritual is already open or complete. Return to its modal, or open /tarot again."}
+                raise ValueError("This control is no longer available. Open /tarot again.")
             db.execute("UPDATE rituals SET status='open' WHERE id=?", (sid,))
             return {"view": self.modal(sid, row[1]), "text": "Your ritual is opening."}
+
+    def failed_open(self, sid: str, team: str, user: str) -> None:
+        # A failed views.open must not strand an unsubmitted ritual.
+        with self.store.connect() as db:
+            db.execute("BEGIN IMMEDIATE")
+            row = self.row(db, sid, team, user)
+            if row[4] == "open":
+                db.execute("UPDATE rituals SET status='ready' WHERE id=?", (sid,))
 
     def modal(self, sid: str, mode: str) -> dict:
         registry = self.store.registry
@@ -350,7 +376,8 @@ class Parlor:
             text = outcome["text"]
             if mode == "draw" and not outcome.get("error"):
                 text = "Your cards are revealed and queued for the channel. Reply to the reading in a thread or add a reaction."
-            result = {"response_action": "update", "view": self.receipt("✦ " + ("Ritual complete" if not outcome.get("error") else "The deck rests"), text)}
+            view = self.reading_receipt(outcome, text) if mode == "draw" and not outcome.get("error") else self.receipt("✦ " + ("Ritual complete" if not outcome.get("error") else "The deck rests"), text)
+            result = {"response_action": "update", "view": view}
             db.execute("UPDATE rituals SET status='done',result=? WHERE id=?", (json.dumps(result), sid))
             return result
 
@@ -365,6 +392,17 @@ class Parlor:
             outcome = self.store.execute(db, team, row[0], user, "unschedule", [row[1].split(":", 1)[1]])
             db.execute("UPDATE rituals SET status='done',result=? WHERE id=?", (json.dumps(outcome), sid))
             return outcome
+
+    @staticmethod
+    def reading_receipt(outcome: dict, text: str) -> dict:
+        view = Parlor.receipt("✦ Your saved reading", text)
+        for position, card in zip(outcome.get("positions", []), outcome.get("card_details", [])):
+            view["blocks"].append({"type": "divider"})
+            view["blocks"].append(section(f"{position}\n{card['name']}\n{card['meaning']}"))
+            source = card.get("art") or card.get("static_art")
+            if source and source.startswith("https://"):
+                view["blocks"].append(image(source, f"{position}: {card['name']}"))
+        return view
 
     @staticmethod
     def receipt(title: str, text: str) -> dict:

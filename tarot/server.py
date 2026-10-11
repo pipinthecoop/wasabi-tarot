@@ -265,6 +265,7 @@ def handler(store: Store, secret: str, team: str, token: str = "", web: WebTable
                             try:
                                 api(token, "views.open", {"trigger_id": data["trigger_id"], "view": outcome["view"]})
                             except (ValueError, OSError):
+                                parlor.failed_open(sid, team, user)
                                 outcome = {"text": "The table could not open. No cards were consumed. Open /tarot again; text commands still work."}
                     else:
                         raise ValueError("Unknown action")
