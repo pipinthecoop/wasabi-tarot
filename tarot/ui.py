@@ -36,8 +36,8 @@ def image(url: str, alt: str) -> dict:
 
 def load_theme(path: str = "theme.json", base_url: str = "") -> dict:
     theme = json.loads(Path(path).read_text()) if Path(path).is_file() else {"name": "The Midnight Parlor", "assets": {}}
-    if theme.get("reading_layout", "classic") not in ("classic", "carousel"):
-        raise ValueError("reading_layout must be classic or carousel")
+    if theme.get("reading_layout", "classic") not in ("classic", "carousel", "board"):
+        raise ValueError("reading_layout must be classic, carousel or board")
     if base_url:
         parsed = urlsplit(base_url)
         if parsed.scheme != "https" or not parsed.netloc or parsed.username or parsed.password or parsed.query or parsed.fragment:
@@ -79,9 +79,15 @@ def reading(theme: dict, registry: dict, channel: str, deck: str, positions: lis
     cards = {c["id"]: c for c in registry["cards"]}
     title = theme.get("name", "The Midnight Parlor")
     name = registry["decks"][deck].get("name", deck)
+    spread_name = next(({"single": "Single-card focus", "three": "Past · Present · Possible path", "decision": "Decision spread"}.get(key, key.title()) for key, slots in registry["spreads"].items() if slots == positions), f"Custom {len(positions)}-card spread")
     lines = [f"{p}: {cards[c]['name']} — {cards[c]['meaning']}" for p, c in zip(positions, picked)]
-    text = f"{title} · {name} · cycle {cycle}\n" + "\n".join(lines) + f"\n{remaining} cards remain. Reflection, not certainty."
+    text = f"{title} · {name} · {spread_name} · cycle {cycle}\n" + "\n".join(lines) + f"\n{remaining} cards remain. Reflection, not certainty."
     blocks = [{"type": "header", "text": plain("✦ Your reading is revealed")}, section(f"{name} · Cycle {cycle}\nTake a breath. Notice what meets you here.")]
+    if theme.get("reading_layout") == "board" and theme.get("public_url"):
+        token = uuid.uuid4().hex
+        url = f"{theme['public_url']}/assets/readings/{token}.png"
+        blocks = [{"type": "header", "text": plain("✦ " + spread_name)}, section(f"{name} · Cycle {cycle}"), image(url, spread_name + ": " + "; ".join(lines)), *[section(line) for line in lines], section(f"{remaining} cards remain · No automatic reshuffle\nReply in a thread or add a reaction.")]
+        return {"channel": channel, "text": text, "blocks": blocks, "unfurl_links": False, "unfurl_media": False, "_reading": True, "_board": {"token": token, "deck": deck, "cards": picked, "positions": positions, "spread": spread_name}}
     hero = asset(theme, "spread", deck)
     if hero:
         blocks.append(image(hero, "Ritual illustration: three face-down celestial gold cards on midnight velvet; revealed cards are described below."))

@@ -11,12 +11,14 @@ import urllib.parse
 import urllib.request
 import uuid
 import mimetypes
+import re
 from http.cookies import SimpleCookie
 from datetime import datetime, timezone
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from threading import Thread
 from pathlib import Path
 
+from tarot.boards import render_board
 from tarot.core import Store, load_registry
 from tarot.ui import Parlor, load_theme
 from tarot.web import WebTable
@@ -43,6 +45,14 @@ def deliver(store: Store, token: str) -> bool:
             return False
         db.execute("UPDATE outbox SET status='sending' WHERE id=?", (row[0],))
     payload = json.loads(row[1])
+    board = payload.pop("_board", None)
+    if board:
+        try:
+            render_board(board, store.registry, Path(store.theme["board_directory"]), Path(__file__).resolve().parents[1] / "art")
+        except (OSError, ValueError, KeyError):
+            with store.connect() as db:
+                db.execute("UPDATE outbox SET status='failed',error='board_render_failed' WHERE id=?", (row[0],))
+            return True
     is_reading = payload.pop("_reading", False)
     method = payload.pop("_method", "chat.postMessage")
     if method not in ("chat.postMessage", "chat.postEphemeral", "views.publish", "entity.presentDetails"):
@@ -158,6 +168,8 @@ def handler(store: Store, secret: str, team: str, token: str = "", web: WebTable
                         continue
                     static[f"/assets/decks/{folder}/{filename.name}"] = filename
             file = static.get(path)
+            if re.fullmatch(r"/assets/readings/[0-9a-f]{32}\.png", path) and store.theme.get("board_directory"):
+                file = Path(store.theme["board_directory"]) / path.rsplit("/", 1)[1]
             if not file or not file.is_file():
                 self.send_response(404)
                 self.end_headers()
@@ -359,6 +371,7 @@ def main() -> None:
     theme["enable_home"] = os.environ.get("ENABLE_APP_HOME", "0") == "1"
     theme["enable_work_objects"] = os.environ.get("ENABLE_WORK_OBJECTS", "0") == "1"
     theme["public_url"] = os.environ.get("PUBLIC_BASE_URL", "").rstrip("/")
+    theme["board_directory"] = os.environ.get("READING_BOARD_DIR", str(Path(path).parent / "boards"))
     store = Store(
         path,
         load_registry(os.environ.get("REGISTRY_PATH", "registry.json"), os.environ.get("ART_BASE_URL", ""), os.environ.get("ANIMATED_ART", "1") == "1"),

@@ -1,7 +1,7 @@
 {
   "name": "The Midnight Parlor",
   "tagline": "A quiet table. A question held. A possible path.",
-  "reading_layout": "classic",
+  "reading_layout": "board",
   "assets": {
     "header": "header.png",
     "card_back": "card-back.png",

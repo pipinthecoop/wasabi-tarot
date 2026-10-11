@@ -78,3 +78,16 @@ See [HOSTING-RUNBOOK.md](HOSTING-RUNBOOK.md) for loopback Mac hosting and the se
 Visit `/decks` (also `/decks/crt`) to browse all 78 Phosphor Arcana cards. Search by name/meaning, filter Major Arcana or each suit, and tap a card to enlarge it. Use the arrows or keyboard left/right to explore the filtered selection; tap again, tap outside, or press Escape to dismiss. GIF glow has a static PNG choice and defaults off with reduced motion. Captions stay below the artwork. The gallery fetches public card definitions and assets only: it never opens a live table, fetches private readings, draws, discards, or schedules.
 
 `default_deck` sets the registry default and must identify a selectable deck. New custom decks remain selectable unless marked `selectable: false`. Retired scheduled rituals are independent persisted records: hiding their deck does **not** stop them. Disable and reconcile legacy schedules explicitly before live migration; never transfer an enabled schedule or unresolved pending outbox into a running worker.
+
+Reading boards: `theme.json` selects `reading_layout: board`. Set `PUBLIC_BASE_URL`
+to the HTTPS app origin and optionally `READING_BOARD_DIR` to a persistent private
+image directory (defaults to `boards` beside the database). Pillow 12.3 composes
+original local PNG card art into large labeled slots; the original animated deck
+assets remain unchanged. Single, three-card, decision, and custom 1–10-position
+spreads share this layout. Slack text includes every position, card, and meaning.
+Boards use random, unlisted bearer URLs under `/assets/readings/`; there is no
+reading directory index. Anyone holding an image URL can view it. Preserve the
+board directory with database backups; do not publish it or use it for deck art.
+The immutable request/outbox stores the image identity. Rendering reuses that
+identity, and failed rendering makes no Slack API call. Existing ambiguous-send
+quarantine rules still apply; never blindly replay a failed historical reading.

@@ -280,6 +280,7 @@ class InterfaceTests(unittest.TestCase):
 
     def test_work_object_delivery_strips_internal_marker(self):
         self.store.theme["enable_work_objects"] = True
+        self.store.theme["board_directory"] = str(Path(self.store.path).parent / "boards")
         self.store.theme["public_url"] = "https://table.example"
         self.store.command("object-reading", "T", "C", "U", "draw dawn")
         with patch("urllib.request.urlopen", return_value=io.StringIO('{"ok":true,"ts":"1.2"}')) as call:
