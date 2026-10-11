@@ -55,7 +55,7 @@ def deliver(store: Store, token: str) -> bool:
             return True
     is_reading = payload.pop("_reading", False)
     method = payload.pop("_method", "chat.postMessage")
-    if method not in ("chat.postMessage", "chat.postEphemeral", "views.publish", "entity.presentDetails"):
+    if method not in ("chat.postMessage", "chat.update", "chat.postEphemeral", "views.publish", "entity.presentDetails"):
         raise ValueError("Unsupported outbox method")
     if method == "chat.postMessage":
         payload["client_msg_id"] = str(uuid.uuid5(uuid.NAMESPACE_URL, row[0]))

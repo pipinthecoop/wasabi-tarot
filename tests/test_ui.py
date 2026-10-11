@@ -289,6 +289,27 @@ class InterfaceTests(unittest.TestCase):
         self.assertNotIn("_reading", payload)
         self.assertEqual(payload["metadata"]["entities"][0]["entity_type"], "slack#/entities/item")
 
+    def test_existing_message_update_reuses_reading_and_strips_internal_fields(self):
+        self.store.theme["public_url"] = "https://table.example"
+        self.store.theme["board_directory"] = str(Path(self.store.path).parent / "boards")
+        saved = self.store.command("saved-reading", "T", "C", "U", "draw crt three")
+        with self.store.connect() as db:
+            before = db.execute("SELECT * FROM shoes").fetchall()
+            payload = dict(saved["payload"], _method="chat.update", ts="1.2")
+            db.execute("UPDATE outbox SET payload=? WHERE id=?", (json.dumps(payload), "saved-reading"))
+        with patch("urllib.request.urlopen", return_value=io.StringIO('{"ok":true,"ts":"1.2"}')) as call:
+            deliver(self.store, "test")
+        request = call.call_args.args[0]
+        self.assertEqual(request.full_url, "https://slack.com/api/chat.update")
+        sent = json.loads(request.data)
+        self.assertEqual(sent["ts"], "1.2")
+        for internal in ("_reading", "_board", "_method", "client_msg_id"):
+            self.assertNotIn(internal, sent)
+        self.assertEqual(sum(block["type"] == "image" for block in sent["blocks"]), 1)
+        with self.store.connect() as db:
+            self.assertEqual(db.execute("SELECT * FROM shoes").fetchall(), before)
+            self.assertEqual(json.loads(db.execute("SELECT result FROM requests WHERE id='saved-reading'").fetchone()[0]), saved)
+
     def test_work_object_public_preview_contains_no_reading_data_or_token(self):
         self.store.command("reading-key", "T", "C", "U", "draw dawn")
         rid = reading_id("reading-key")
